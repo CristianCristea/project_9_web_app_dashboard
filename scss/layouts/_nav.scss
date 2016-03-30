@@ -1,3 +1,31 @@
 /***********************************************************
 *** Nav
 ***********************************************************/
+
+nav {
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    box-sizing: initial;
+    width: 32px;
+    margin-top: 1em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    padding-left: 1.563em;
+    border-left: 3px solid transparent;
+  }
+  
+  li:first-child {
+    border-color: $de_york;
+  }
+
+  li:hover {
+    cursor: pointer;
+    border-color: $de_york;
+    transition: all .3s;
+  }
+}
