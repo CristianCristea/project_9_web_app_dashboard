@@ -20,7 +20,7 @@
     </header>
     
     <aside class="left-side">
-      <nav>
+      <nav class="main-nav">
         <ul>
           <li><a href="#"><img src="img/icons/icon-dashboard.svg" alt="icon-dashboard"></a></li>
           <li><a href="#"><img src="img/icons/icon-members.svg" alt="icon-members"></a></li>
@@ -38,6 +38,16 @@
       </section>
 
       <section class="traffic-chart">
+        <h3 class="section-heading">Traffic</h3>
+        <nav class="traffic-nav">
+          <ul>
+            <li><a href="#">Hourly</a></li>
+            <li><a href="#">Daily</a></li>
+            <li><a href="#">Weekly</a></li>
+            <li><a href="#" class="active">Monthly</a></li>
+          </ul>
+        </nav>
+
         <canvas id="myChart" width="1000" height="240"></canvas>
       </section>
     </main>

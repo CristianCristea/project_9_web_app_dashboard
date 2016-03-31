@@ -30,7 +30,7 @@ var lineChartData = {
 window.onload = function(){
   var ctx = document.getElementById("myChart").getContext("2d");
   window.myLine = new Chart(ctx).Line(lineChartData, {
-    responsive: false,
+    responsive: true,
     // adjusting scale
     scaleOverride: true,
     scaleSteps: 5,

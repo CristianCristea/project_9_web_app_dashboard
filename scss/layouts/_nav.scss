@@ -1,8 +1,8 @@
 /***********************************************************
-*** Nav
+*** Main Nav
 ***********************************************************/
 
-nav { 
+nav.main-nav { 
   margin-top: 6.250em;
 
   ul {
@@ -28,5 +28,41 @@ nav {
     cursor: pointer;
     border-color: $de_york;
     transition: all .3s;
+  }
+}
+
+/***********************************************************
+*** Traffic nav
+***********************************************************/
+
+nav.traffic-nav {
+  
+  .active {
+    background-color: $de_york;
+    color: #fff ;
+    border-radius: 10px;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      a{
+        text-decoration: none;
+        color: $dove_gray;
+        display: inline-block;
+        padding: 5px 12px;
+        font-size: .9em;
+        font-weight: $font-weight-semibold;
+
+        &:hover {
+          color: #fff;
+          border-radius: 10px;
+          background-color: $de_york;
+        } 
+      }
+    }
   }
 }
