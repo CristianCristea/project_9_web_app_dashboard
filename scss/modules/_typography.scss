@@ -19,3 +19,9 @@ body {
   font-weight: $font-weight-light;
   color: $dove_gray;
 }
+
+.alert-heading {
+  font-size: 1em;
+  font-weight: $font-weight-semibold;
+  text-transform: capitalize;
+}

@@ -54,7 +54,36 @@ section.search {
 }
 
 /***********************************************************
-*** Traffic chart
+*** Section Alert
+***********************************************************/
+
+section.alert {
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: $primary-color;
+  color: #fff;
+  margin-top: 2em;
+
+  .alert-heading {
+    display: inline-block;
+    padding-right: 1.4em;
+    margin: 1em 0 1em 3em;
+  }
+
+  button {
+    background: none;
+    color: #fff;
+    font-size: .9em;
+    font-weight: $font-weight-bold;
+    float: right;
+    margin: 1em;
+    border: none;
+  }
+}
+
+/***********************************************************
+*** Section traffic-chart
 ***********************************************************/
 
 section.traffic-chart {

@@ -15,6 +15,12 @@
 .clearfix:after {
   clear: both; }
 
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
+
 /***********************************************************
 *** General
 ***********************************************************/
@@ -151,6 +157,11 @@ body {
   font-weight: 300;
   color: #666666; }
 
+.alert-heading {
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: capitalize; }
+
 /***********************************************************
 *** Main
 ***********************************************************/
@@ -194,7 +205,30 @@ section.search {
     color: #7377bf; }
 
 /***********************************************************
-*** Traffic chart
+*** Section Alert
+***********************************************************/
+section.alert {
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #7377bf;
+  color: #fff;
+  margin-top: 2em; }
+  section.alert .alert-heading {
+    display: inline-block;
+    padding-right: 1.4em;
+    margin: 1em 0 1em 3em; }
+  section.alert button {
+    background: none;
+    color: #fff;
+    font-size: .9em;
+    font-weight: 900;
+    float: right;
+    margin: 1em;
+    border: none; }
+
+/***********************************************************
+*** Section traffic-chart
 ***********************************************************/
 section.traffic-chart {
   margin: 30px 50px; }
