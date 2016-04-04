@@ -1,5 +1,6 @@
 // generating random scaling
 var randomScalingFactor = function(){ return Math.round(Math.random()*2500)};
+var randomScalingFactor250 = function(){ return Math.round(Math.random()*250)};
 
 
 
@@ -30,7 +31,7 @@ var barChartData = {
       strokeColor : "#7377bf",
       highlightFill: "#FFC870",
      
-      data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+      data : [randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250()]
      }
   ]
 
@@ -91,7 +92,6 @@ window.onload = function(){
     barDatasetSpacing : 100,
     barValueSpacing : 30,
     barShowStroke : false,
-    showTooltips: false
   }
 
   var doughnutChartOptions = {
