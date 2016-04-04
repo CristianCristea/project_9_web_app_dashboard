@@ -1,53 +1,78 @@
-
+// generating random scaling
 var randomScalingFactor = function(){ return Math.round(Math.random()*2500)};
+
+
+
 var lineChartData = {
   labels : ["January","February","March","April","May","June","July"],
   datasets : [
     {
-      label: "My First dataset",
+      label: "Traffic chart",
       fillColor : "rgba(226, 227, 246, .6)",
       strokeColor : "#7377bf",
       pointColor : "#fff",
       pointStrokeColor : "#4d4c72",
       pointHighlightFill : "#4d4c72",
       pointHighlightStroke : "#fff",
+     
       data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
-     }//,
-    // {
-    //   label: "My Second dataset",
-    //   fillColor : "rgba(151,187,205,0.2)",
-    //   strokeColor : "rgba(151,187,205,1)",
-    //   pointColor : "rgba(151,187,205,1)",
-    //   pointStrokeColor : "#fff",
-    //   pointHighlightFill : "#fff",
-    //   pointHighlightStroke : "rgba(151,187,205,1)",
-    //   data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
-    // }
+     }
+  ]
+
+};
+
+var barChartData = {
+  labels : ["M","T","W","T","F","S","S"],
+  datasets : [
+    {
+      label: "Daily traffic chart",
+      fillColor : "rgba(226, 227, 246, .6)",
+      strokeColor : "#7377bf",
+      pointColor : "#fff",
+      pointStrokeColor : "#4d4c72",
+      pointHighlightFill : "#4d4c72",
+      pointHighlightStroke : "#fff",
+     
+      data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+     }
   ]
 
 };
 
 window.onload = function(){
-  var ctx = document.getElementById("myChart").getContext("2d");
-  window.myLine = new Chart(ctx).Line(lineChartData, {
-    responsive: true,
-    // adjusting scale
-    scaleOverride: true,
-    scaleSteps: 5,
-    scaleStepWidth: 500,
-    scaleStartValue: 0,
-    bezierCurve: false,
-    // Tooltip style
-    tooltipFillColor: "#7377bf",
-    tooltipFontFamily: "Lato, sans-serif",
-    tooltipFontSize: 14,
-    tooltipFontStyle: "normal",
-    tooltipFontColor: "#fff",
+  
+  Chart.defaults.global.responsive = true;
+
+  Chart.defaults.global.scaleOverride= true;
+  Chart.defaults.global.scaleSteps= 5;
+  // Chart.defaults.global.scaleStepWidth= 500;
+  Chart.defaults.global.scaleStartValue= 0;
+  
+  // Tooltip style
+  Chart.defaults.global.tooltipFillColor= "#7377bf";
+  Chart.defaults.global.tooltipFontFamily= "Lato, sans-serif";
+  Chart.defaults.global.tooltipFontSize= 14;
+  Chart.defaults.global.tooltipFontStyle= "normal";
+  Chart.defaults.global.tooltipFontColor= "#fff";
+
+  var lineTrafficChart = document.getElementById("trafficChart").getContext("2d");
+  var barDailyTraffic = document.getElementById("dailyTraffic").getContext("2d");
+  var lineChartOptions = { 
     // Points style
      pointDotRadius : 5,
-     pointDotStrokeWidth : 2
+     pointDotStrokeWidth : 2,
+     bezierCurve: false,
+    // scale steps
+    scaleStepWidth: 500
+  }
 
-  });
+  barChartOptions = {
+    scaleStepWidth: 50
+  }
+
+  window.myLine = new Chart(lineTrafficChart).Line(lineChartData, lineChartOptions);
+  window.myBar = new Chart(barDailyTraffic).Bar(barChartData, barChartOptions)
+
 };
 
 
