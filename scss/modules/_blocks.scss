@@ -108,3 +108,76 @@
     margin-bottom: .3em; 
   }
 }
+
+/***********************************************************
+*** Block new-members
+***********************************************************/
+
+.block-new-members {
+  padding-top: 30px;
+  float: left;
+  width: 50%;
+  border-right: 1px solid $silver_chalice_a;
+}
+
+.block-new-member,
+.block-member-recent-activity {
+  
+  color: $dove_gray;
+  margin-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  border-top: 1px solid $silver_chalice_a;
+
+  img {
+    margin-bottom: -24px;
+  }
+
+  .member-email,
+  .member-profile {
+    padding-left: 60px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: $font-weight-normal;
+    color: $primary-color;
+
+    &:hover {
+      color: $secondary-color;
+    }    
+  }
+
+  .join-date {
+    float: right;
+    margin-top: -10px;
+  }
+
+  .member-name {
+    padding-left: 10px;
+  }
+}
+
+
+
+/***********************************************************
+*** Block recent activity
+***********************************************************/ 
+
+.block-recent-activity {
+  width: 49%;
+  padding-top: 30px;
+  padding-left: 50px;
+  float:left;
+
+  .block-member-recent-activity {
+    width: 90%;
+  }
+
+  .member-profile {
+    padding-left: 10px;
+  }
+
+  .comment-time {
+    display: inline-block;
+    padding-left: 60px;
+  }
+}

@@ -21,6 +21,12 @@
 .hide {
   display: none; }
 
+.no-top-border {
+  border-top: none !important; }
+
+.img-round {
+  border-radius: 50%; }
+
 /***********************************************************
 *** General
 ***********************************************************/
@@ -252,6 +258,63 @@ body {
     margin-bottom: .3em; }
 
 /***********************************************************
+*** Block new-members
+***********************************************************/
+.block-new-members {
+  padding-top: 30px;
+  float: left;
+  width: 50%;
+  border-right: 1px solid #b2b2b2; }
+
+.block-new-member,
+.block-member-recent-activity {
+  color: #666666;
+  margin-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  border-top: 1px solid #b2b2b2; }
+  .block-new-member img,
+  .block-member-recent-activity img {
+    margin-bottom: -24px; }
+  .block-new-member .member-email,
+  .block-new-member .member-profile,
+  .block-member-recent-activity .member-email,
+  .block-member-recent-activity .member-profile {
+    padding-left: 60px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 400;
+    color: #7377bf; }
+    .block-new-member .member-email:hover,
+    .block-new-member .member-profile:hover,
+    .block-member-recent-activity .member-email:hover,
+    .block-member-recent-activity .member-profile:hover {
+      color: #4d4c72; }
+  .block-new-member .join-date,
+  .block-member-recent-activity .join-date {
+    float: right;
+    margin-top: -10px; }
+  .block-new-member .member-name,
+  .block-member-recent-activity .member-name {
+    padding-left: 10px; }
+
+/***********************************************************
+*** Block recent activity
+***********************************************************/
+.block-recent-activity {
+  width: 49%;
+  padding-top: 30px;
+  padding-left: 50px;
+  float: left; }
+  .block-recent-activity .block-member-recent-activity {
+    width: 90%; }
+  .block-recent-activity .member-profile {
+    padding-left: 10px; }
+  .block-recent-activity .comment-time {
+    display: inline-block;
+    padding-left: 60px; }
+
+/***********************************************************
 *** General
 ***********************************************************/
 .container {
@@ -339,6 +402,31 @@ section.traffic-chart {
 section.traffic-data {
   border-top: 1px solid #b2b2b2;
   border-bottom: 1px solid #b2b2b2; }
+
+/***********************************************************
+*** Section social-stats
+***********************************************************/
+section.social-stats {
+  border-bottom: 1px solid #b2b2b2;
+  padding-top: 30px;
+  padding-bottom: 50px; }
+
+/***********************************************************
+*** Section news
+***********************************************************/
+section.news {
+  border-bottom: 1px solid #b2b2b2; }
+  section.news .block-member-recent-activity {
+    position: relative; }
+    section.news .block-member-recent-activity .next-activity {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      font-size: 4em;
+      color: #7377bf;
+      margin-top: -20px; }
+      section.news .block-member-recent-activity .next-activity:hover {
+        color: #4d4c72; }
 
 /***********************************************************
 *** Social stats icons

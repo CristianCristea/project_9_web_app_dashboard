@@ -115,3 +115,41 @@ section.traffic-data {
   border-top: 1px solid $silver_chalice_a;
   border-bottom: 1px solid $silver_chalice_a;
 }
+
+
+/***********************************************************
+*** Section social-stats
+***********************************************************/
+
+section.social-stats {
+  // border-top: 1px solid $silver_chalice_a;
+  border-bottom: 1px solid $silver_chalice_a;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+
+/***********************************************************
+*** Section news
+***********************************************************/
+
+section.news {
+  border-bottom: 1px solid $silver_chalice_a;
+
+  .block-member-recent-activity {
+    position: relative;
+
+    .next-activity{
+      position: absolute;
+      top: 50%;
+      right: 0;
+      font-size: 4em;
+      color: $primary-color;
+      margin-top: -20px;
+
+        &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}

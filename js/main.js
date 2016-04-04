@@ -41,19 +41,19 @@ var doughnutChartData = [
         value: 100,
         color:"#81c98f",
         highlight: "#FF5A5E",
-        label: "Age 16-24"
+        label: "Tablets"
     },
     {
         value: 50,
         color: "#74b1bf",
         highlight: "#5AD3D1",
-        label: "Age 24-34"
+        label: "Phones"
     },
     {
         value: 300,
         color: "#7377bf",
         highlight: "#FFC870",
-        label: "Age 34-44"
+        label: "Desktop"
     }
 ]
 
