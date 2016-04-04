@@ -39,6 +39,28 @@ var barChartData = {
 
 };
 
+var doughnutChartData = [
+    {
+        value: 100,
+        color:"#81c98f",
+        highlight: "#FF5A5E",
+        label: "Age 16-24"
+    },
+    {
+        value: 50,
+        color: "#74b1bf",
+        highlight: "#5AD3D1",
+        label: "Age 24-34"
+    },
+    {
+        value: 300,
+        color: "#7377bf",
+        highlight: "#FFC870",
+        label: "Age 34-44"
+    }
+]
+
+
 window.onload = function(){
   
   Chart.defaults.global.responsive = true;
@@ -57,6 +79,7 @@ window.onload = function(){
 
   var lineTrafficChart = document.getElementById("trafficChart").getContext("2d");
   var barDailyTraffic = document.getElementById("dailyTraffic").getContext("2d");
+  var mobileUsers = document.getElementById("mobileUsers").getContext("2d");
   var lineChartOptions = { 
     // Points style
      pointDotRadius : 5,
@@ -66,13 +89,15 @@ window.onload = function(){
     scaleStepWidth: 500
   }
 
-  barChartOptions = {
+  var barChartOptions = {
     scaleStepWidth: 50
   }
 
-  window.myLine = new Chart(lineTrafficChart).Line(lineChartData, lineChartOptions);
-  window.myBar = new Chart(barDailyTraffic).Bar(barChartData, barChartOptions)
+  var doughnutChartOptions = {animateScale : false}
 
+  window.lineTrafficChart = new Chart(lineTrafficChart).Line(lineChartData, lineChartOptions);
+  window.barDailyTraffic = new Chart(barDailyTraffic).Bar(barChartData, barChartOptions);
+  window.mobileUsers = new Chart(mobileUsers).Doughnut(doughnutChartData, doughnutChartOptions);
 };
 
 
