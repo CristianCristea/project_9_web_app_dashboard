@@ -163,6 +163,67 @@ body {
   text-transform: capitalize; }
 
 /***********************************************************
+*** General
+***********************************************************/
+/***********************************************************
+*** Block daily-traffic
+***********************************************************/
+.daily-traffic {
+  width: 49%;
+  display: inline-block;
+  border-right: 1px solid #b2b2b2;
+  padding: 2em 2em 2em 0; }
+  .daily-traffic .block-heading {
+    margin-bottom: 2em; }
+
+/***********************************************************
+*** Block mobile-users
+***********************************************************/
+.mobile-users {
+  width: 49%;
+  display: inline-block;
+  padding: 2em 0 2em 2em;
+  position: relative; }
+  .mobile-users .block-heading {
+    margin-bottom: 2em; }
+  .mobile-users canvas {
+    display: inline-block;
+    margin-left: -5em; }
+  .mobile-users ul.sample {
+    list-style: none;
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    right: 2em; }
+    .mobile-users ul.sample li {
+      position: relative;
+      margin-bottom: 2em;
+      font-size: 1.2em;
+      font-weight: 300;
+      color: #666666; }
+      .mobile-users ul.sample li:first-child::before, .mobile-users ul.sample li:nth-child(2)::before, .mobile-users ul.sample li:last-child::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 120%;
+        margin-top: -1em;
+        width: 2em;
+        height: 2em;
+        background-color: #7377bf;
+        border-radius: 5px; }
+      .mobile-users ul.sample li:nth-child(2)::before {
+        background-color: #81c98f; }
+      .mobile-users ul.sample li:last-child::before {
+        background-color: #74b1bf; }
+
+/***********************************************************
+*** General
+***********************************************************/
+.container {
+  width: 90%;
+  margin: 0 auto; }
+
+/***********************************************************
 *** Main
 ***********************************************************/
 main {
@@ -236,5 +297,12 @@ section.traffic-chart {
     display: inline-block; }
   section.traffic-chart nav.traffic-nav {
     float: right; }
+
+/***********************************************************
+*** Section traffic-data
+***********************************************************/
+section.traffic-data {
+  border-top: 1px solid #b2b2b2;
+  border-bottom: 1px solid #b2b2b2; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -26,12 +26,9 @@ var barChartData = {
   datasets : [
     {
       label: "Daily traffic chart",
-      fillColor : "rgba(226, 227, 246, .6)",
+      fillColor : "#7377bf",
       strokeColor : "#7377bf",
-      pointColor : "#fff",
-      pointStrokeColor : "#4d4c72",
-      pointHighlightFill : "#4d4c72",
-      pointHighlightStroke : "#fff",
+      highlightFill: "#FFC870",
      
       data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
      }
@@ -90,10 +87,16 @@ window.onload = function(){
   }
 
   var barChartOptions = {
-    scaleStepWidth: 50
+    scaleStepWidth: 50,
+    barDatasetSpacing : 100,
+    barValueSpacing : 30,
+    barShowStroke : false,
+    showTooltips: false
   }
 
-  var doughnutChartOptions = {animateScale : false}
+  var doughnutChartOptions = {
+    animateScale : false
+  }
 
   window.lineTrafficChart = new Chart(lineTrafficChart).Line(lineChartData, lineChartOptions);
   window.barDailyTraffic = new Chart(barDailyTraffic).Bar(barChartData, barChartOptions);
