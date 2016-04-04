@@ -25,3 +25,16 @@ body {
   font-weight: $font-weight-semibold;
   text-transform: capitalize;
 }
+
+.social-heading {
+  color: $primary-color;
+  font-size: 1.4em;
+  font-weight: $font-weight-normal;
+  margin-bottom: 10px;
+}
+
+.number-followers {
+  color: $dove_gray;
+  font-size: 3em;
+  font-weight: $font-weight-light;
+}

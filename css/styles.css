@@ -162,6 +162,17 @@ body {
   font-weight: 700;
   text-transform: capitalize; }
 
+.social-heading {
+  color: #7377bf;
+  font-size: 1.4em;
+  font-weight: 400;
+  margin-bottom: 10px; }
+
+.number-followers {
+  color: #666666;
+  font-size: 3em;
+  font-weight: 300; }
+
 /***********************************************************
 *** General
 ***********************************************************/
@@ -215,6 +226,30 @@ body {
         background-color: #81c98f; }
       .mobile-users ul.sample li:last-child::before {
         background-color: #74b1bf; }
+
+/***********************************************************
+*** Block social stats
+***********************************************************/
+.block-social-stats {
+  display: inline-block;
+  width: 29%;
+  border: 1px solid #b2b2b2;
+  border-radius: 5px;
+  background-color: #fbfbfb;
+  margin-left: 4%;
+  padding: 20px;
+  margin-top: 0; }
+  .block-social-stats .icon-twitter,
+  .block-social-stats .icon-facebook,
+  .block-social-stats .icon-google {
+    display: inline-block; }
+  .block-social-stats .icon-facebook {
+    margin-top: 6px; }
+  .block-social-stats .stats {
+    display: inline-block;
+    text-align: left;
+    margin-left: 2em;
+    margin-bottom: .3em; }
 
 /***********************************************************
 *** General
@@ -304,5 +339,31 @@ section.traffic-chart {
 section.traffic-data {
   border-top: 1px solid #b2b2b2;
   border-bottom: 1px solid #b2b2b2; }
+
+/***********************************************************
+*** Social stats icons
+***********************************************************/
+.icon-twitter,
+.icon-facebook,
+.icon-google {
+  width: 80px;
+  height: 80px;
+  background-color: #7377bf;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0; }
+  .icon-twitter svg,
+  .icon-facebook svg,
+  .icon-google svg {
+    width: 100%;
+    padding: 26px 22px 24px; }
+    .icon-twitter svg .social-icons,
+    .icon-facebook svg .social-icons,
+    .icon-google svg .social-icons {
+      fill: white; }
+  .icon-twitter #iconFacebook,
+  .icon-facebook #iconFacebook,
+  .icon-google #iconFacebook {
+    padding: 22px; }
 
 /*# sourceMappingURL=styles.css.map */

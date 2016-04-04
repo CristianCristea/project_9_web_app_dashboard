@@ -76,3 +76,35 @@
   }
  }
 }
+
+/***********************************************************
+*** Block social stats
+***********************************************************/
+
+.block-social-stats {
+  display: inline-block;
+  width: 29%;
+  border: 1px solid $silver_chalice_a;
+  border-radius: 5px;
+  background-color: $alabaster;
+  margin-left: 4%;
+  padding: 20px;
+  margin-top: 0;
+
+  .icon-twitter,
+  .icon-facebook,
+  .icon-google {
+    display: inline-block;
+  }
+
+  .icon-facebook{
+    margin-top: 6px;
+  }
+
+  .stats {
+    display: inline-block;
+    text-align: left;
+    margin-left: 2em;
+    margin-bottom: .3em; 
+  }
+}
