@@ -315,6 +315,21 @@ body {
     padding-left: 60px; }
 
 /***********************************************************
+*** Block message user
+***********************************************************/
+.block-message-user {
+  width: 50%;
+  display: inline-block;
+  border-right: 1px solid #b2b2b2; }
+
+/***********************************************************
+*** Block settings
+***********************************************************/
+.block-settings {
+  width: 49%;
+  display: inline-block; }
+
+/***********************************************************
 *** General
 ***********************************************************/
 .container {
@@ -429,6 +444,14 @@ section.news {
         color: #4d4c72; }
 
 /***********************************************************
+*** Section Message and Settings
+***********************************************************/
+section.message-settings {
+  margin-bottom: 60px; }
+  section.message-settings .block-message-user {
+    padding-bottom: 60px; }
+
+/***********************************************************
 *** Social stats icons
 ***********************************************************/
 .icon-twitter,
@@ -453,5 +476,107 @@ section.news {
   .icon-facebook #iconFacebook,
   .icon-google #iconFacebook {
     padding: 22px; }
+
+/***********************************************************
+*** Checkbox 
+***********************************************************/
+.cmn-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden; }
+
+.cmn-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none; }
+
+input.cmn-toggle-round-flat + label {
+  padding: 2px;
+  width: 120px;
+  height: 60px;
+  background-color: #dddddd;
+  border-radius: 60px;
+  transition: background 0.4s; }
+
+input.cmn-toggle-round-flat + label:before,
+input.cmn-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: ""; }
+
+input.cmn-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #fff;
+  border-radius: 60px;
+  transition: background 0.4s; }
+
+input.cmn-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 52px;
+  background-color: #dddddd;
+  border-radius: 52px;
+  transition: margin 0.4s, background 0.4s; }
+
+input.cmn-toggle-round-flat:checked + label {
+  background-color: #8ce196; }
+
+input.cmn-toggle-round-flat:checked + label:after {
+  margin-left: 60px;
+  background-color: #8ce196; }
+
+/***********************************************************
+*** Form message
+***********************************************************/
+.form-message input,
+.form-message textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 94%;
+  margin-bottom: 20px;
+  border: 2px solid #b2b2b2;
+  border-radius: 5px; }
+.form-message input[type="search"] {
+  font-size: 1em;
+  padding: 10px;
+  font-weight: 300;
+  color: #7377bf; }
+  .form-message input[type="search"]:focus {
+    outline-color: #7377bf;
+    border-style: solid;
+    border-color: #7377bf;
+    outline-width: 2px;
+    outline-style: inherit; }
+.form-message textarea {
+  font-size: 1em;
+  padding: 10px;
+  color: #7377bf; }
+  .form-message textarea:focus {
+    outline-color: #7377bf;
+    border-style: solid;
+    border-color: #7377bf;
+    outline-width: 2px;
+    outline-style: inherit; }
+
+/***********************************************************
+*** Buttons
+***********************************************************/
+input.form-primary-button {
+  background-color: #7377bf;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  padding: 10px;
+  border-color: #7377bf; }
+  input.form-primary-button:hover {
+    color: #7377bf;
+    border-color: #7377bf;
+    background-color: #fff; }
 
 /*# sourceMappingURL=styles.css.map */

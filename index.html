@@ -184,17 +184,39 @@
         <div class="container">
           <div class="block-message-user">
             <h3 class="block-heading">Message user</h3>
-            <form action="#">
+            <form action="#" class="form-message">
 
-              <input type="text" placeholder="Search for user">
-              <textarea name="message-body" id="message" cols="30" rows="10"></textarea>
+              <input type="search" placeholder="Search for user">
+              <textarea name="message-body" id="message" cols="30" rows="10" placeholder="Message for user"></textarea>
 
-              <input type="submit" value="Send">
+              <input class="form-primary-button" type="submit" value="Send">
             </form>
           </div> <!-- ./block-message-user -->
 
-          <div class="settings">
-            
+          <div class="block-settings">
+            <h3 class="block-heading">Settings</h3>
+            <form action="#">
+              <span class="settings-option">Send Email Notification</span>
+              <div class="switch">
+                <input id="cmn-toggle-4" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+                <label for="cmn-toggle-4"></label>
+              </div>
+
+              <span class="settings-option">Set Profile to Public</span>
+              <div class="switch">
+                <input id="cmn-toggle-4" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+                <label for="cmn-toggle-4"></label>
+              </div>
+
+              <select>
+               <option value="0" disabled>Select a time zone</option>
+                <option value="1">America</option>
+                <option value="2">Europe</option>
+              </select>
+
+              <input type="submit" value="Send">
+              <input type="reset" value="Cancel">
+            </form>
           </div>
 
         </div> <!-- ./container -->
