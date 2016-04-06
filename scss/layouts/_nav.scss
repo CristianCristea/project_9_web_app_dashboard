@@ -12,7 +12,7 @@ nav.main-nav {
 
   li {
     box-sizing: initial;
-    width: 32px;
+    width: 2em;
     margin-top: 1em;
     padding-top: .2em;
     padding-bottom: .2em;
@@ -53,7 +53,7 @@ nav.traffic-nav {
         text-decoration: none;
         color: $dove_gray;
         display: inline-block;
-        padding: 5px 12px;
+        padding:  0.313em 0.750em;
         font-size: .9em;
         font-weight: $font-weight-semibold;
 

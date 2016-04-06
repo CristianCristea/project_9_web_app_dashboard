@@ -5,8 +5,8 @@
 .icon-twitter,
 .icon-facebook,
 .icon-google {
-  width: 80px;
-  height: 80px;
+  width: 5em;
+  height: 5em;
   background-color: $primary-color;
   border-radius: 50%;
   padding: 0;
@@ -14,7 +14,7 @@
 
   svg {
     width: 100%;
-    padding: 26px 22px 24px;
+    padding: 1.625em 1.375em 1.5em;
 
     .social-icons {
       fill: white;
@@ -22,7 +22,7 @@
   }
 
   #iconFacebook {
-    padding: 22px;
+    padding: 1.375em;
   }
 }
 
@@ -35,6 +35,7 @@
   margin-left: -9999px;
   visibility: hidden;
 }
+
 .cmn-toggle + label {
   display: block;
   position: relative;
@@ -45,18 +46,20 @@
 
 input.cmn-toggle-round-flat + label {
   padding: 2px;
-  width: 120px;
-  height: 60px;
+  width: 80px;
+  height: 30px;
   background-color: #dddddd;
   border-radius: 60px;
   transition: background 0.4s;
 }
+
 input.cmn-toggle-round-flat + label:before,
 input.cmn-toggle-round-flat + label:after {
   display: block;
   position: absolute;
   content: "";
 }
+
 input.cmn-toggle-round-flat + label:before {
   top: 2px;
   left: 2px;
@@ -66,21 +69,24 @@ input.cmn-toggle-round-flat + label:before {
   border-radius: 60px;
   transition: background 0.4s;
 }
+
 input.cmn-toggle-round-flat + label:after {
   top: 4px;
   left: 4px;
   bottom: 4px;
-  width: 52px;
+  width: 26px;
   background-color: #dddddd;
-  border-radius: 52px;
+  border-radius: 26px;
   transition: margin 0.4s, background 0.4s;
 }
+
 input.cmn-toggle-round-flat:checked + label {
-  background-color: #8ce196;
+  background-color: $primary-color;
 }
+
 input.cmn-toggle-round-flat:checked + label:after {
-  margin-left: 60px;
-  background-color: #8ce196;
+  margin-left: 46px;
+  background-color: $primary-color;
 }
 
 /***********************************************************
@@ -94,14 +100,14 @@ input.cmn-toggle-round-flat:checked + label:after {
     box-sizing: border-box;
     display: block;
     width: 94%;
-    margin-bottom: 20px;
+    margin-bottom: 1.250em;
     border: 2px solid $silver_chalice_a;
     border-radius: 5px;
   }
 
   input[type="search"] {
     font-size: 1em;
-    padding: 10px;
+    padding: 0.625em;
     font-weight: $font-weight-light;
     color: $primary-color;
     
@@ -116,7 +122,7 @@ input.cmn-toggle-round-flat:checked + label:after {
 
   textarea {
     font-size: 1em;
-    padding: 10px;
+    padding: 0.625em;
     color: $primary-color;
     
     &:focus {
@@ -127,4 +133,94 @@ input.cmn-toggle-round-flat:checked + label:after {
       outline-style: inherit;
     }
   }
+}
+
+/***********************************************************
+*** Form settings
+***********************************************************/
+
+.form-settings {
+
+  .settings-option {
+    display: inline-block;
+    color: $dove_gray;
+    font-size: 1.2em;
+    font-weight: $font-weight-normal;
+  }
+
+  .switch {
+    display: inline-block;
+    margin-left: 6.250em;
+
+    #cmn-toggle-1 + label,
+    #cmn-toggle-2 + label{
+      margin-bottom: -0.625em;
+    }
+
+    #cmn-toggle-2 + label{
+      margin-left: 1.875em;
+    }
+  }
+
+  .form-settings-option {
+    display: block;
+    padding-bottom: 1.875em;
+  }
+  
+  
+}
+
+/***********************************************************
+*** select
+***********************************************************/
+
+/* remove standard-styles */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border:none;
+  border-radius: 0;
+  font-size: 1em;
+  width: 100%
+}
+
+/* hide browser-styling (arrow) in IE10 */
+select::-ms-expand {
+  display:none;
+}
+
+/* styling */
+select {
+  width:100%;
+  border: 1px solid #bbb;
+  padding:.75em 1em .5em 1em;
+  box-shadow: none;
+  background-color:white;
+  background-image:url(../img/basics-08-128.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  outline: none;
+  border-color: $silver_chalice_a;
+  border-radius: 5px;
+  color: $silver_chalice_a;
+  padding: 0.625em;
+  font-size: 1.125em;
+
+
+  &:hover,
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+option {
+  background:#fff;
+  border-top:1px solid $silver_chalice_a;
+  font-size: 1.125em;
+  color: $primary-color;
+  border-radius: 5px;
+  outline: none;
 }

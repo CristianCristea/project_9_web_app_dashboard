@@ -12,8 +12,8 @@
 ***********************************************************/
 
 main {
-  margin-top: 78px;
-  margin-left: 90px;
+  margin-top: 4.875em;
+  margin-left: 5.625em;
 
   .main-heading {
     margin: 1.6em;
@@ -37,7 +37,7 @@ section.search {
 
   input[type="search"] {
     font-size: 1.1em;
-    padding: 10px;
+    padding: 0.625em;
     border-style: solid;
     border-color: $alto;
     border-radius: 5px;
@@ -96,7 +96,7 @@ section.alert {
 ***********************************************************/
 
 section.traffic-chart {
-  margin: 30px 50px;
+  margin: 1.875em 3.125em;
 
   .section-heading {
     display: inline-block;
@@ -124,8 +124,8 @@ section.traffic-data {
 section.social-stats {
   // border-top: 1px solid $silver_chalice_a;
   border-bottom: 1px solid $silver_chalice_a;
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding-top: 1.875em;
+  padding-bottom: 3.125em;
 }
 
 
@@ -145,7 +145,7 @@ section.news {
       right: 0;
       font-size: 4em;
       color: $primary-color;
-      margin-top: -20px;
+      margin-top: -1.250em;
 
         &:hover {
         color: $secondary-color;
@@ -159,9 +159,32 @@ section.news {
 ***********************************************************/
 
 section.message-settings {
-  margin-bottom: 60px;
+  margin-bottom: 3.750em;
+
+  .block-heading {
+    padding-top: 1.875em;
+    padding-bottom: 1.875em;
+  }
 
   .block-message-user {
-    padding-bottom: 60px;
+    padding-bottom: 3.750em;
+  }
+
+  .block-settings {
+    float: right;
+
+    form.form-settings {
+      .form-primary-button {
+        width: 49%;
+        margin-top: 7.438em;
+      }
+
+      input[type="submit"]{
+        float: left;
+      }
+      input[type="reset"] {
+        float: right;
+      }
+    }
   }
 }
