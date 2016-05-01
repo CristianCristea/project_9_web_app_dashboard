@@ -13,7 +13,8 @@
 
 main {
   margin-top: 4.875em;
-  margin-left: 5.625em;
+  margin-left: 0;
+  transition: all .4s;
 
   .main-heading {
     margin: 1.6em;
@@ -73,7 +74,8 @@ section.alert {
   background-color: $primary-color;
   color: #fff;
   margin-top: 2em;
-
+  display: none;
+  
   .alert-heading {
     display: inline-block;
     padding-right: 1.4em;

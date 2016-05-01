@@ -3,5 +3,30 @@
 *********************************************/
 
 @media screen and (min-width: #{$tablet-large}) {
+  
+  // show the profile name
+  header {
 
+    .profile-header {
+    
+      .profile-name {
+        display: inline-block;
+      }
+    }
+  }
+  
+  // reset the main margin
+  main {
+    margin-left: 5.625em !important;
+  }
+
+  // main nav
+  .left-side {
+    margin-left: 0;
+  }
+
+  // hide the menu btn section
+  section.display-sm-nav {
+    display: none;
+  }
 }

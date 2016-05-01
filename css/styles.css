@@ -27,6 +27,12 @@
 .img-round {
   border-radius: 50%; }
 
+.active-nav {
+  margin-left: 0; }
+
+.active-main {
+  margin-left: 5.625em; }
+
 /***********************************************************
 *** General
 ***********************************************************/
@@ -36,6 +42,21 @@
 /***********************************************************
 *** Main Nav
 ***********************************************************/
+.display-sm-nav {
+  background-color: #4d4c72;
+  margin-top: 4.8em;
+  padding: 3em;
+  text-align: center; }
+  .display-sm-nav .menu-btn {
+    background: none;
+    color: #fff;
+    font-size: 2em;
+    border: 0;
+    cursor: pointer;
+    outline-color: #81c98f; }
+    .display-sm-nav .menu-btn:hover {
+      color: #81c98f; }
+
 nav.main-nav {
   margin-top: 6.250em; }
   nav.main-nav ul {
@@ -104,9 +125,19 @@ header {
     margin-top: 1.250em;
     margin-right: 1.2em;
     padding: 0.313em 1.2em 0.313em 0;
-    border-right: 1px solid #4d4c72; }
+    border-right: 1px solid #4d4c72;
+    position: relative; }
     header .alert-bell img {
       height: 1.875em; }
+    header .alert-bell .msg-number {
+      font-size: .6em;
+      border-radius: 50%;
+      background-color: #81c98f;
+      padding: 3px 6px;
+      color: #fff;
+      position: absolute;
+      top: -6px;
+      right: 20px; }
   header .profile-header {
     float: right; }
     header .profile-header .profile-name {
@@ -116,7 +147,8 @@ header {
       color: #fff;
       padding: 0 1.250em 1.625em 0.438em;
       vertical-align: middle;
-      margin: 0; }
+      margin: 0;
+      display: none; }
     header .profile-header img {
       border-radius: 50%;
       height: 2.250em;
@@ -132,7 +164,9 @@ header {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  margin-left: -5.625em;
+  transition: all .4s; }
 
 /*********************************************
 ***** Footer
@@ -140,6 +174,18 @@ header {
 /*********************************************
 ***** Tablet
 *********************************************/
+@media screen and (min-width: 768px) {
+  header .profile-header .profile-name {
+    display: inline-block; }
+
+  main {
+    margin-left: 5.625em !important; }
+
+  .left-side {
+    margin-left: 0; }
+
+  section.display-sm-nav {
+    display: none; } }
 /*********************************************
 ***** Desktop
 *********************************************/
@@ -341,7 +387,8 @@ body {
 ***********************************************************/
 main {
   margin-top: 4.875em;
-  margin-left: 5.625em; }
+  margin-left: 0;
+  transition: all .4s; }
   main .main-heading {
     margin: 1.6em;
     display: inline-block; }
@@ -387,7 +434,8 @@ section.alert {
   border-radius: 5px;
   background-color: #7377bf;
   color: #fff;
-  margin-top: 2em; }
+  margin-top: 2em;
+  display: none; }
   section.alert .alert-heading {
     display: inline-block;
     padding-right: 1.4em;
@@ -658,5 +706,33 @@ input.form-primary-button {
     color: #7377bf;
     border-color: #7377bf;
     background-color: #fff; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
+
+.no-top-border {
+  border-top: none !important; }
+
+.img-round {
+  border-radius: 50%; }
+
+.active-nav {
+  margin-left: 0; }
+
+.active-main {
+  margin-left: 5.625em; }
 
 /*# sourceMappingURL=styles.css.map */

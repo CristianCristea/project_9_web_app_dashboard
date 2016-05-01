@@ -1,6 +1,26 @@
 /***********************************************************
 *** Main Nav
 ***********************************************************/
+.display-sm-nav {
+  background-color: $secondary-color;
+  margin-top: 4.8em;
+  padding: 3em;
+  text-align: center;
+
+  .menu-btn {
+    background: none;
+    color: #fff;
+    font-size: 2em;
+    border: 0;
+    cursor: pointer;
+    outline-color: $de_york;
+
+    &:hover {
+      color: $de_york;
+    }
+  }
+}
+
 
 nav.main-nav { 
   margin-top: 6.250em;

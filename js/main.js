@@ -103,4 +103,19 @@ window.onload = function(){
   window.mobileUsers = new Chart(mobileUsers).Doughnut(doughnutChartData, doughnutChartOptions);
 };
 
+$(document).ready(function() {
 
+  // toggle main nav on small screens
+  $('#menu').click(function() {
+    $(this).parent().siblings('aside').toggleClass('active-nav');
+    $('main').toggleClass('active-main');
+  });
+
+  // alert
+
+  $('#alert-bell').click(function(e){
+    e.preventDefault();
+    $('#alert-msg, #msg-number').fadeToggle('slow', 'linear');
+  });
+
+});

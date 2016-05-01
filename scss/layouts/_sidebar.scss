@@ -8,5 +8,8 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
+  left:0;
+  margin-left: -5.625em;
+
+  transition: all .4s;
 }
