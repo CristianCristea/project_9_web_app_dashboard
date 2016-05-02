@@ -117,13 +117,33 @@ section.alert {
 
 section.traffic-chart {
   margin: 1.875em 3.125em;
+  display: none;
 
-  .section-heading {
-    display: inline-block;
+  .block-heading {
+    display: block;
+    text-align: center;
+    padding-top: 8em;
+
+    @media screen and (min-width: #{$tablet-large}) {
+      text-align: left;
+    }
+
+    @media screen and (min-width: #{$screen-small}) {
+      padding-top: 1em;
+    }
+      
   }
   
   nav.traffic-nav {
-    float: right;
+    text-align: center;
+
+    @media screen and (min-width: #{$tablet-large}) {
+      float: right;
+    }      
+  }
+
+  @media screen and (min-width: 500px) {
+    display: block;
   }
 }
 

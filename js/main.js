@@ -116,6 +116,12 @@ $(document).ready(function() {
   $('#alert-bell').click(function(e){
     e.preventDefault();
     $('#alert-msg, #msg-number').fadeToggle('slow', 'linear');
+    $('.traffic-chart  .block-heading').toggleClass('p-t-1');
+  });
+
+  $('#close').click(function(e) {
+    e.preventDefault();
+    $('#msg-number').fadeOut('slow', 'linear');
   });
 
 });

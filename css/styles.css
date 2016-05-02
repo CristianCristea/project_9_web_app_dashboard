@@ -33,6 +33,9 @@
 .active-main {
   margin-left: 5.625em; }
 
+.p-t-1 {
+  padding-top: 1em !important; }
+
 /***********************************************************
 *** General
 ***********************************************************/
@@ -467,11 +470,26 @@ section.alert {
 *** Section traffic-chart
 ***********************************************************/
 section.traffic-chart {
-  margin: 1.875em 3.125em; }
-  section.traffic-chart .section-heading {
-    display: inline-block; }
+  margin: 1.875em 3.125em;
+  display: none; }
+  section.traffic-chart .block-heading {
+    display: block;
+    text-align: center;
+    padding-top: 8em; }
+    @media screen and (min-width: 768px) {
+      section.traffic-chart .block-heading {
+        text-align: left; } }
+    @media screen and (min-width: 1024px) {
+      section.traffic-chart .block-heading {
+        padding-top: 1em; } }
   section.traffic-chart nav.traffic-nav {
-    float: right; }
+    text-align: center; }
+    @media screen and (min-width: 768px) {
+      section.traffic-chart nav.traffic-nav {
+        float: right; } }
+  @media screen and (min-width: 500px) {
+    section.traffic-chart {
+      display: block; } }
 
 /***********************************************************
 *** Section traffic-data
@@ -748,5 +766,8 @@ input.form-primary-button {
 
 .active-main {
   margin-left: 5.625em; }
+
+.p-t-1 {
+  padding-top: 1em !important; }
 
 /*# sourceMappingURL=styles.css.map */
