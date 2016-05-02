@@ -17,8 +17,17 @@ main {
   transition: all .4s;
 
   .main-heading {
-    margin: 1.6em;
-    display: inline-block;
+    text-align: center;
+    display: block;
+
+    @media screen and (min-width: #{$tablet-large}) {
+      margin-top: 4em;
+    }
+
+    @media screen and (min-width: #{$screen-small}) {
+      margin: 1.6em;
+      display: inline-block;
+    }
   }
 }
 
@@ -27,14 +36,22 @@ main {
 ***********************************************************/
 
 section.search {
-  display: inline-block;
+  display: block;
   border-left: 1px solid $alto;
   border-bottom: 1px solid $alto;
   float: right;
-  width: 80%;
+  width: 100%;
   position: relative;
   background-color: $alabaster;
 
+  @media screen and (min-width: #{$screen-small}) {
+    display: inline-block;
+    width: 74%;  
+  }
+
+  @media screen and (min-width: #{$screen-large}) {
+      width: 80%;
+    }
 
   input[type="search"] {
     font-size: 1.1em;
@@ -42,10 +59,11 @@ section.search {
     border-style: solid;
     border-color: $alto;
     border-radius: 5px;
-    margin: 2em;
-    float: right;
-    width: 23.750em;
+    margin: 2em 18px 2em 2em;
+    width: 80%;
     color: $primary-color;
+    float: right;
+
 
     &:focus {
       border-color: $primary-color;
@@ -56,9 +74,9 @@ section.search {
 
   i.fa-search {
     position: absolute;
-    right: 2em;
+    right: 1.6em;
     font-size: 1.4em;
-    top: 2em;
+    top: 2.1em;
     color: $primary-color;
   }
 }
