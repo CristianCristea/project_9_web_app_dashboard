@@ -15,7 +15,6 @@ var lineChartData = {
       pointStrokeColor : "#4d4c72",
       pointHighlightFill : "#4d4c72",
       pointHighlightStroke : "#fff",
-     
       data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
      }
   ]
@@ -30,7 +29,6 @@ var barChartData = {
       fillColor : "#7377bf",
       strokeColor : "#7377bf",
       highlightFill: "#FFC870",
-     
       data : [randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250()]
      }
   ]
@@ -60,14 +58,12 @@ var doughnutChartData = [
 
 
 window.onload = function(){
-  
   Chart.defaults.global.responsive = true;
-
   Chart.defaults.global.scaleOverride= true;
   Chart.defaults.global.scaleSteps= 5;
   // Chart.defaults.global.scaleStepWidth= 500;
   Chart.defaults.global.scaleStartValue= 0;
-  
+
   // Tooltip style
   Chart.defaults.global.tooltipFillColor= "#7377bf";
   Chart.defaults.global.tooltipFontFamily= "Lato, sans-serif";
@@ -78,10 +74,10 @@ window.onload = function(){
   var lineTrafficChart = document.getElementById("trafficChart").getContext("2d");
   var barDailyTraffic = document.getElementById("dailyTraffic").getContext("2d");
   var mobileUsers = document.getElementById("mobileUsers").getContext("2d");
-  var lineChartOptions = { 
+  var lineChartOptions = {
     // Points style
-     pointDotRadius : 5,
-     pointDotStrokeWidth : 2,
+     pointDotRadius: 5,
+     pointDotStrokeWidth: 2,
      bezierCurve: false,
     // scale steps
     scaleStepWidth: 500
