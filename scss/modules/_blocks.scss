@@ -7,13 +7,13 @@
 ***********************************************************/
 
 .daily-traffic {
-  width: 49%;
-  display: inline-block;
-  border-right: 1px solid $silver_chalice_a;
+  display: block; 
   padding: 2em 2em 2em 0;
 
  .block-heading {
-  margin-bottom: 2em;
+  padding-top: 6em;
+  text-align: center;
+
  }
 }
 
@@ -22,13 +22,13 @@
 ***********************************************************/
 
 .mobile-users {
-   width: 49%;
-   display: inline-block;
-   padding: 2em 0 2em 2em;
-   position: relative;
+  display: block;
+  padding: 2em 0 2em 2em;
+  position: relative;
 
  .block-heading {
   margin-bottom: 2em;
+  text-align: center;
  }
 
  canvas {

@@ -3,6 +3,31 @@
 ***** Desktop
 *********************************************/
 
-@media screen and (min-width: #{$screen-small}) {
+@media screen and (min-width: 500px) {
+  .daily-traffic .block-heading {
+    padding-top: 0;
+  }
+}
 
+@media screen and (min-width: #{$screen-small}) {
+  .daily-traffic {
+    width: 49%;
+    display: inline-block;
+    border-right: 1px solid $silver_chalice_a;
+
+    .block-heading {
+      padding-top: 0;
+      margin-bottom: 2em;
+      text-align: left;
+    } 
+  }
+
+  .mobile-users {
+    width: 49%;
+    display: inline-block;
+
+    .block-heading {
+      text-align: left;
+    }
+  }
 }
