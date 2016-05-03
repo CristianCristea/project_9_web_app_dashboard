@@ -93,7 +93,7 @@ body {
 ***********************************************************/
 .mobile-users {
   display: block;
-  padding: 2em 0 2em 2em;
+  padding: 2em 0 3em 1em;
   position: relative; }
   .mobile-users .block-heading {
     margin-bottom: 2em;
@@ -105,8 +105,8 @@ body {
     list-style: none;
     display: inline-block;
     position: absolute;
-    top: 40%;
-    right: 2em; }
+    top: 30%;
+    right: 1em; }
     .mobile-users ul.sample li {
       position: relative;
       margin-bottom: 2em;
@@ -131,15 +131,18 @@ body {
 /***********************************************************
 *** Block social stats
 ***********************************************************/
+.social-stats .block-heading {
+  text-align: center; }
+
 .block-social-stats {
-  display: inline-block;
-  width: 29%;
+  display: block;
+  text-align: center;
+  min-width: 263px;
   border: 1px solid #b2b2b2;
   border-radius: 5px;
   background-color: #fbfbfb;
-  margin-left: 4%;
-  padding: 20px;
-  margin-top: 0; }
+  margin: 0 auto 1%;
+  padding: 20px; }
   .block-social-stats .icon-twitter,
   .block-social-stats .icon-facebook,
   .block-social-stats .icon-google {
@@ -149,8 +152,10 @@ body {
   .block-social-stats .stats {
     display: inline-block;
     text-align: left;
-    margin-left: 2em;
+    margin-left: 1em;
     margin-bottom: .3em; }
+    .block-social-stats .stats .social-heading {
+      margin-top: 0; }
 
 /***********************************************************
 *** Block new-members
@@ -752,7 +757,19 @@ header {
     width: 49%;
     display: inline-block; }
     .mobile-users .block-heading {
-      text-align: left; } }
+      text-align: left; }
+
+  .social-stats .block-heading {
+    text-align: left; }
+
+  .block-social-stats {
+    margin: 0 1% 0 0;
+    display: inline-block;
+    text-align: left;
+    width: 29%; } }
+@media screen and (min-width: 1280px) {
+  .block-social-stats {
+    margin-right: 4%; } }
 /***********************************************************
 *** Print
 ***********************************************************/

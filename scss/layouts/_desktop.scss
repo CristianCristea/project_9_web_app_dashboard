@@ -30,4 +30,25 @@
       text-align: left;
     }
   }
+
+  .social-stats {
+    
+    .block-heading {
+      text-align: left;
+    }
+  }
+
+  .block-social-stats {
+    margin: 0 1% 0 0;
+    display: inline-block;
+    text-align: left;
+    width: 29%;
+  }
+
+}
+
+@media screen and (min-width: #{$screen-large}) {
+  .block-social-stats {
+    margin-right: 4%;
+  }
 }

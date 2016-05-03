@@ -23,7 +23,7 @@
 
 .mobile-users {
   display: block;
-  padding: 2em 0 2em 2em;
+  padding: 2em 0 3em 1em;
   position: relative;
 
  .block-heading {
@@ -40,8 +40,8 @@
   list-style: none;
   display: inline-block;
   position: absolute;
-  top: 40%;
-  right: 2em;
+  top: 30%;
+  right: 1em;
 
   li{
     position: relative;
@@ -81,15 +81,22 @@
 *** Block social stats
 ***********************************************************/
 
+.social-stats {
+
+  .block-heading {
+    text-align: center;
+  }
+}
+
 .block-social-stats {
-  display: inline-block;
-  width: 29%;
+  display: block;
+  text-align: center;
+  min-width: 263px;
   border: 1px solid $silver_chalice_a;
   border-radius: 5px;
   background-color: $alabaster;
-  margin-left: 4%;
+  margin: 0 auto 1%;
   padding: 20px;
-  margin-top: 0;
 
   .icon-twitter,
   .icon-facebook,
@@ -104,8 +111,12 @@
   .stats {
     display: inline-block;
     text-align: left;
-    margin-left: 2em;
-    margin-bottom: .3em; 
+    margin-left: 1em;
+    margin-bottom: .3em;
+
+    .social-heading {
+      margin-top: 0;
+    }
   }
 }
 
