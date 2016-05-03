@@ -66,6 +66,27 @@
     }
   }
 
+  .block-message-user {
+    width: 50%;
+    display: inline-block;
+    border-right: 1px solid $silver_chalice_a;
+
+    .block-heading {
+      text-align: left;
+    }
+  }
+
+  .block-settings {
+    width: 49%;
+    display: inline-block;
+    float: right;
+
+    .block-heading {
+      text-align: center;
+    }
+}
+
+
 }
 
 @media screen and (min-width: #{$screen-large}) {

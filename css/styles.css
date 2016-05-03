@@ -225,17 +225,14 @@ body {
 /***********************************************************
 *** Block message user
 ***********************************************************/
-.block-message-user {
-  width: 50%;
-  display: inline-block;
-  border-right: 1px solid #b2b2b2; }
+.block-message-user .block-heading {
+  text-align: center; }
 
 /***********************************************************
 *** Block settings
 ***********************************************************/
-.block-settings {
-  width: 49%;
-  display: inline-block; }
+.block-settings .block-heading {
+  text-align: center; }
 
 /***********************************************************
 *** General
@@ -391,15 +388,13 @@ section.message-settings {
     padding-bottom: 1.875em; }
   section.message-settings .block-message-user {
     padding-bottom: 3.750em; }
-  section.message-settings .block-settings {
+  section.message-settings .block-settings form.form-settings .form-primary-button {
+    width: 49%;
+    margin-top: 7.3em; }
+  section.message-settings .block-settings form.form-settings input[type="submit"] {
+    float: left; }
+  section.message-settings .block-settings form.form-settings input[type="reset"] {
     float: right; }
-    section.message-settings .block-settings form.form-settings .form-primary-button {
-      width: 49%;
-      margin-top: 7.438em; }
-    section.message-settings .block-settings form.form-settings input[type="submit"] {
-      float: left; }
-    section.message-settings .block-settings form.form-settings input[type="reset"] {
-      float: right; }
 
 /***********************************************************
 *** Social stats icons
@@ -788,7 +783,21 @@ header {
     padding-left: 3.125em;
     float: left; }
     .block-recent-activity .block-heading {
-      text-align: left; } }
+      text-align: left; }
+
+  .block-message-user {
+    width: 50%;
+    display: inline-block;
+    border-right: 1px solid #b2b2b2; }
+    .block-message-user .block-heading {
+      text-align: left; }
+
+  .block-settings {
+    width: 49%;
+    display: inline-block;
+    float: right; }
+    .block-settings .block-heading {
+      text-align: center; } }
 @media screen and (min-width: 1280px) {
   .block-social-stats {
     margin-right: 4%; } }

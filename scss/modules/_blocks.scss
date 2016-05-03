@@ -216,9 +216,10 @@
 ***********************************************************/
 
 .block-message-user {
-  width: 50%;
-  display: inline-block;
-  border-right: 1px solid $silver_chalice_a;
+  
+  .block-heading {
+    text-align: center;
+  }
 }
 
 
@@ -227,6 +228,8 @@
 ***********************************************************/
 
 .block-settings {
-  width: 49%;
-  display: inline-block;
+
+  .block-heading {
+    text-align: center;
+  }
 }
