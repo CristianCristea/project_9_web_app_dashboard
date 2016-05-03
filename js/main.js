@@ -121,7 +121,8 @@ $(document).ready(function() {
 
   $('#close').click(function(e) {
     e.preventDefault();
-    $('#msg-number').fadeOut('slow', 'linear');
+    $('#alert-msg').fadeOut('slow', 'linear');
+    $('#msg-number').fadeIn('slow', 'linear');
   });
 
 });

@@ -308,17 +308,23 @@ section.alert {
   background-color: #7377bf;
   color: #fff;
   margin-top: 2em;
-  display: none; }
+  display: none;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding: 10px; }
   section.alert .alert-heading {
-    display: inline-block;
+    text-align: center;
     padding-right: 1.4em;
     margin: 1em 0 1em 3em; }
   section.alert button {
+    position: absolute;
+    top: 0;
+    right: 0;
     background: none;
     color: #fff;
     font-size: .9em;
     font-weight: 900;
-    float: right;
     margin: 1em;
     border: none; }
 
