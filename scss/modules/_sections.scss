@@ -181,11 +181,10 @@ section.news {
 
     .next-activity{
       position: absolute;
-      top: 50%;
-      right: 0;
+      top: 20%;
+      right: -30px;
       font-size: 4em;
       color: $primary-color;
-      margin-top: -1.250em;
 
         &:hover {
         color: $secondary-color;

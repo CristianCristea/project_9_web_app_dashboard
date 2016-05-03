@@ -45,6 +45,27 @@
     width: 29%;
   }
 
+  .block-new-members {
+    float: left;
+    width: 50%;
+    border-right: 1px solid $silver_chalice_a;
+
+    .block-heading {
+      text-align: left;
+    }
+  }
+
+  .block-recent-activity {
+    width: 49%;
+    padding-top: 1.875em;
+    padding-left: 3.125em;
+    float:left;
+
+    .block-heading {
+      text-align: left;
+    }
+  }
+
 }
 
 @media screen and (min-width: #{$screen-large}) {

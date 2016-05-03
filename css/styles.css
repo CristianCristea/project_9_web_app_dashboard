@@ -161,10 +161,9 @@ body {
 *** Block new-members
 ***********************************************************/
 .block-new-members {
-  padding-top: 30px;
-  float: left;
-  width: 50%;
-  border-right: 1px solid #b2b2b2; }
+  padding-top: 30px; }
+  .block-new-members .block-heading {
+    text-align: center; }
 
 .block-new-member,
 .block-member-recent-activity {
@@ -202,17 +201,26 @@ body {
 *** Block recent activity
 ***********************************************************/
 .block-recent-activity {
-  width: 49%;
-  padding-top: 1.875em;
-  padding-left: 3.125em;
-  float: left; }
+  padding-top: 30px; }
+  .block-recent-activity .block-heading {
+    text-align: center; }
+  .block-recent-activity .comment-img {
+    display: inline-block; }
+    .block-recent-activity .comment-img img {
+      margin-bottom: 0; }
+  .block-recent-activity .comment-msg {
+    display: inline-block;
+    width: 70%;
+    padding-left: 10px; }
+    .block-recent-activity .comment-msg a {
+      padding: 0; }
   .block-recent-activity .block-member-recent-activity {
-    width: 90%; }
+    width: 90%;
+    padding-bottom: 2em; }
   .block-recent-activity .member-profile {
     padding-left: 0.625em; }
   .block-recent-activity .comment-time {
-    display: inline-block;
-    padding-left: 3.750em; }
+    display: inline-block; }
 
 /***********************************************************
 *** Block message user
@@ -366,11 +374,10 @@ section.news {
     position: relative; }
     section.news .block-member-recent-activity .next-activity {
       position: absolute;
-      top: 50%;
-      right: 0;
+      top: 20%;
+      right: -30px;
       font-size: 4em;
-      color: #7377bf;
-      margin-top: -1.250em; }
+      color: #7377bf; }
       section.news .block-member-recent-activity .next-activity:hover {
         color: #4d4c72; }
 
@@ -766,7 +773,22 @@ header {
     margin: 0 1% 0 0;
     display: inline-block;
     text-align: left;
-    width: 29%; } }
+    width: 29%; }
+
+  .block-new-members {
+    float: left;
+    width: 50%;
+    border-right: 1px solid #b2b2b2; }
+    .block-new-members .block-heading {
+      text-align: left; }
+
+  .block-recent-activity {
+    width: 49%;
+    padding-top: 1.875em;
+    padding-left: 3.125em;
+    float: left; }
+    .block-recent-activity .block-heading {
+      text-align: left; } }
 @media screen and (min-width: 1280px) {
   .block-social-stats {
     margin-right: 4%; } }
