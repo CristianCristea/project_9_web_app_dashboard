@@ -224,3 +224,47 @@ option {
   border-radius: 5px;
   outline: none;
 }
+
+/***********************************************************
+*** Alert dropdown
+***********************************************************/
+
+.alert-dropdown-menu{
+  position: absolute;
+  top: 5em;
+  right: 1em;
+  border: 2px solid $primary-color;
+  border-radius: 5px;
+  text-align: center;
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 20px 40px;
+      background-color: $primary-color;
+      border-bottom: 2px solid $white_color;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: lighten($primary-color, 10%);
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: $white_color;
+  }
+
+  @media screen and (min-width: #{$tablet-large}) {
+    right: 9em;
+  }
+}

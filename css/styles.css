@@ -85,7 +85,6 @@ body {
   display: block;
   padding: 2em 2em 2em 0; }
   .daily-traffic .block-heading {
-    padding-top: 6em;
     text-align: center; }
 
 /***********************************************************
@@ -266,7 +265,6 @@ section.search {
   display: block;
   border-left: 1px solid #dfdfdf;
   border-bottom: 1px solid #dfdfdf;
-  float: right;
   width: 100%;
   position: relative;
   background-color: #fbfbfb; }
@@ -274,6 +272,10 @@ section.search {
     section.search {
       display: inline-block;
       width: 74%; } }
+  @media screen and (min-width: 768px) {
+    section.search {
+      float: right;
+      margin-bottom: 1em; } }
   @media screen and (min-width: 1280px) {
     section.search {
       width: 80%; } }
@@ -302,7 +304,8 @@ section.search {
 *** Section Alert
 ***********************************************************/
 section.alert {
-  width: 95%;
+  max-width: 95%;
+  padding: 10px;
   margin: 0 auto;
   border-radius: 5px;
   background-color: #7377bf;
@@ -310,11 +313,9 @@ section.alert {
   margin-top: 2em;
   display: none;
   position: relative;
-  display: inline-block;
   text-align: center;
-  padding: 10px; }
+  z-index: 1000; }
   section.alert .alert-heading {
-    text-align: center;
     padding-right: 1.4em;
     margin: 1em 0 1em 3em; }
   section.alert button {
@@ -326,7 +327,8 @@ section.alert {
     font-size: .9em;
     font-weight: 900;
     margin: 1em;
-    border: none; }
+    border: none;
+    display: inline-block; }
 
 /***********************************************************
 *** Section traffic-chart
@@ -336,8 +338,7 @@ section.traffic-chart {
   display: none; }
   section.traffic-chart .block-heading {
     display: block;
-    text-align: center;
-    padding-top: 8em; }
+    text-align: center; }
     @media screen and (min-width: 768px) {
       section.traffic-chart .block-heading {
         text-align: left; } }
@@ -357,8 +358,10 @@ section.traffic-chart {
 *** Section traffic-data
 ***********************************************************/
 section.traffic-data {
-  border-top: 1px solid #b2b2b2;
   border-bottom: 1px solid #b2b2b2; }
+  @media screen and (min-width: 500px) {
+    section.traffic-data {
+      border-top: 1px solid #b2b2b2; } }
 
 /***********************************************************
 *** Section social-stats
@@ -582,6 +585,37 @@ option {
   outline: none; }
 
 /***********************************************************
+*** Alert dropdown
+***********************************************************/
+.alert-dropdown-menu {
+  position: absolute;
+  top: 5em;
+  right: 1em;
+  border: 2px solid #7377bf;
+  border-radius: 5px;
+  text-align: center; }
+  .alert-dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .alert-dropdown-menu ul li {
+      padding: 20px 40px;
+      background-color: #7377bf;
+      border-bottom: 2px solid #fff; }
+      .alert-dropdown-menu ul li:last-child {
+        border-bottom: none; }
+      .alert-dropdown-menu ul li:hover {
+        cursor: pointer;
+        background-color: #9699cf; }
+  .alert-dropdown-menu a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff; }
+  @media screen and (min-width: 768px) {
+    .alert-dropdown-menu {
+      right: 9em; } }
+
+/***********************************************************
 *** Buttons
 ***********************************************************/
 input.form-primary-button {
@@ -669,6 +703,8 @@ header {
   z-index: 100;
   height: 4.875em;
   background-color: #7377bf; }
+  header .container {
+    position: relative; }
   header .logo {
     float: left;
     color: #fff;
@@ -689,10 +725,10 @@ header {
     header .alert-bell img {
       height: 1.875em; }
     header .alert-bell .msg-number {
-      font-size: .6em;
+      font-size: .5em;
       border-radius: 50%;
       background-color: #81c98f;
-      padding: 3px 6px;
+      padding: 1px 4px;
       color: #fff;
       position: absolute;
       top: -6px;

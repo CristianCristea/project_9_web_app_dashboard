@@ -10,6 +10,10 @@ header {
   height: 4.875em;
   background-color: $primary-color;
 
+  .container {
+    position: relative;
+  }
+  
   .logo {
     float: left;
     color: #fff;
@@ -39,10 +43,10 @@ header {
     }
 
     .msg-number {
-      font-size: .6em;
+      font-size: .5em;
       border-radius: 50%;
       background-color: $de_york;
-      padding: 3px 6px;
+      padding: 1px 4px;
       color: #fff;
       position: absolute;
       top: -6px;

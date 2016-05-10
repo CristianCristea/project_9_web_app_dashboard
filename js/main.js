@@ -2,8 +2,6 @@
 var randomScalingFactor = function(){ return Math.round(Math.random()*2500)};
 var randomScalingFactor250 = function(){ return Math.round(Math.random()*250)};
 
-
-
 var lineChartData = {
   labels : ["January","February","March","April","May","June","July"],
   datasets : [
@@ -56,7 +54,6 @@ var doughnutChartData = [
     }
 ]
 
-
 window.onload = function(){
   Chart.defaults.global.responsive = true;
   Chart.defaults.global.scaleOverride= true;
@@ -107,14 +104,19 @@ $(document).ready(function() {
     $('main').toggleClass('active-main');
   });
 
-  // alert
-
+  // alert dropdown menu
   $('#alert-bell').click(function(e){
     e.preventDefault();
-    $('#alert-msg, #msg-number').fadeToggle('slow', 'linear');
-    $('.traffic-chart  .block-heading').toggleClass('p-t-1');
+    $('#alert-menu, #msg-number').fadeToggle('slow', 'linear');
   });
 
+  $('#alert-menu').find('a').click(function(e){
+    e.preventDefault();
+    $('#alert-msg').fadeToggle('slow', 'linear');
+    $('.traffic-chart .block-heading').toggleClass('p-t-1');
+  });
+
+  // close alert box
   $('#close').click(function(e) {
     e.preventDefault();
     $('#alert-msg').fadeOut('slow', 'linear');
