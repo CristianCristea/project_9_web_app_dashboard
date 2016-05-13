@@ -23,36 +23,49 @@ var barChartData = {
   labels : ["M","T","W","T","F","S","S"],
   datasets : [
     {
-      label: "Daily traffic chart",
+      label: "Daily traffic chart mobile",
       fillColor : "#7377bf",
       strokeColor : "#7377bf",
       highlightFill: "#FFC870",
       data : [randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250()]
-     }
+     },
+    {
+      label: "Daily traffic chart desktop",
+      fillColor : "#81c98f",
+      strokeColor : "#81c98f",
+      highlightFill: "#FFC870",
+      data : [randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250()]
+    }
   ]
 
 };
 
 var doughnutChartData = [
     {
-        value: 100,
-        color:"#81c98f",
-        highlight: "#FF5A5E",
-        label: "Tablets"
+      value: 100,
+      color:"#81c98f",
+      highlight: "#FF5A5E",
+      label: "Tablets"
     },
     {
-        value: 50,
-        color: "#74b1bf",
-        highlight: "#5AD3D1",
-        label: "Phones"
+      value: 50,
+      color: "#74b1bf",
+      highlight: "#5AD3D1",
+      label: "Phones"
     },
     {
-        value: 300,
-        color: "#7377bf",
-        highlight: "#FFC870",
-        label: "Desktop"
+      value: 300,
+      color: "#7377bf",
+      highlight: "#FFC870",
+      label: "Desktop"
+    },
+    {
+      value: 10,
+      color: "#dfdfdf",
+      highlight: "#FFC870",
+      label: "Other"
     }
-]
+];
 
 window.onload = function(){
   Chart.defaults.global.responsive = true;
@@ -78,18 +91,18 @@ window.onload = function(){
      bezierCurve: false,
     // scale steps
     scaleStepWidth: 500
-  }
+  };
 
   var barChartOptions = {
     scaleStepWidth: 50,
-    barDatasetSpacing : 100,
+    barDatasetSpacing : 80,
     barValueSpacing : 30,
     barShowStroke : false,
-  }
+  };
 
   var doughnutChartOptions = {
     animateScale : false
-  }
+  };
 
   window.lineTrafficChart = new Chart(lineTrafficChart).Line(lineChartData, lineChartOptions);
   window.barDailyTraffic = new Chart(barDailyTraffic).Bar(barChartData, barChartOptions);

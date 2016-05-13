@@ -51,6 +51,7 @@
 
     &:first-child,
     &:nth-child(2),
+    &:nth-child(3),
     &:last-child {
       &::before {
         content: "";
@@ -65,12 +66,16 @@
       }   
     }
 
-     &:nth-child(2)::before {
+    &:nth-child(2)::before {
       background-color:  $de_york;
-     }
+    }
+
+    &:nth-child(3)::before {
+      background-color:  $glacier;
+    }
 
     &:last-child::before {
-      background-color:  $glacier;
+      background-color:  $alto;
      }  
   }
  }

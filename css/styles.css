@@ -112,7 +112,7 @@ body {
       font-size: 1.2em;
       font-weight: 300;
       color: #666666; }
-      .mobile-users ul.sample li:first-child::before, .mobile-users ul.sample li:nth-child(2)::before, .mobile-users ul.sample li:last-child::before {
+      .mobile-users ul.sample li:first-child::before, .mobile-users ul.sample li:nth-child(2)::before, .mobile-users ul.sample li:nth-child(3)::before, .mobile-users ul.sample li:last-child::before {
         content: "";
         position: absolute;
         top: 50%;
@@ -124,8 +124,10 @@ body {
         border-radius: 5px; }
       .mobile-users ul.sample li:nth-child(2)::before {
         background-color: #81c98f; }
-      .mobile-users ul.sample li:last-child::before {
+      .mobile-users ul.sample li:nth-child(3)::before {
         background-color: #74b1bf; }
+      .mobile-users ul.sample li:last-child::before {
+        background-color: #dfdfdf; }
 
 /***********************************************************
 *** Block social stats
