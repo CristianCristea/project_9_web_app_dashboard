@@ -110,16 +110,23 @@ $(document).ready(function() {
     $('#alert-menu, #msg-number').fadeToggle('slow', 'linear');
   });
 
-  $('#alert-menu').find('a').click(function(e){
+  // display alert one
+  $('#alert-menu').find('a[name="alert-one"]').click(function(e){
     e.preventDefault();
-    $('#alert-msg').fadeToggle('slow', 'linear');
+    $('#alert-msg-one').fadeToggle('slow', 'linear');
+    $('.traffic-chart .block-heading').toggleClass('p-t-1');
+  });
+  // display alert two
+  $('#alert-menu').find('a[name="alert-two"]').click(function(e){
+    e.preventDefault();
+    $('#alert-msg-two').fadeToggle('slow', 'linear');
     $('.traffic-chart .block-heading').toggleClass('p-t-1');
   });
 
   // close alert box
-  $('#close').click(function(e) {
+  $('.close').click(function(e) {
     e.preventDefault();
-    $('#alert-msg').fadeOut('slow', 'linear');
+    $(this).parent().fadeOut('slow', 'linear');
     $('#msg-number').fadeIn('slow', 'linear');
   });
 
