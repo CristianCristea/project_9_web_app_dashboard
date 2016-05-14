@@ -125,13 +125,13 @@ $(document).ready(function() {
   });
 
   // display alert one
-  $('#alert-menu').find('a[name="alert-one"]').click(function(e){
+  $('#alert-menu').find('#alert-one').click(function(e){
     e.preventDefault();
     $('#alert-msg-one').fadeToggle('slow', 'linear');
     $('.traffic-chart .block-heading').toggleClass('p-t-1');
   });
   // display alert two
-  $('#alert-menu').find('a[name="alert-two"]').click(function(e){
+  $('#alert-menu').find('#alert-two').click(function(e){
     e.preventDefault();
     $('#alert-msg-two').fadeToggle('slow', 'linear');
     $('.traffic-chart .block-heading').toggleClass('p-t-1');
@@ -141,7 +141,6 @@ $(document).ready(function() {
   $('.close').click(function(e) {
     e.preventDefault();
     $(this).parent().fadeOut('slow', 'linear');
-    $('#msg-number').fadeIn('slow', 'linear');
   });
 
 });
