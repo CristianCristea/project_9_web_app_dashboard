@@ -263,7 +263,7 @@ main {
 /***********************************************************
 *** Search
 ***********************************************************/
-section.search {
+div.search {
   display: block;
   border-left: 1px solid #dfdfdf;
   border-bottom: 1px solid #dfdfdf;
@@ -271,17 +271,17 @@ section.search {
   position: relative;
   background-color: #fbfbfb; }
   @media screen and (min-width: 1024px) {
-    section.search {
+    div.search {
       display: inline-block;
       width: 74%; } }
   @media screen and (min-width: 768px) {
-    section.search {
+    div.search {
       float: right;
       margin-bottom: 1em; } }
   @media screen and (min-width: 1280px) {
-    section.search {
+    div.search {
       width: 80%; } }
-  section.search input[type="search"] {
+  div.search input[type="search"] {
     font-size: 1.1em;
     padding: 0.625em;
     border-style: solid;
@@ -291,11 +291,11 @@ section.search {
     width: 80%;
     color: #7377bf;
     float: right; }
-    section.search input[type="search"]:focus {
+    div.search input[type="search"]:focus {
       border-color: #7377bf;
       outline-color: #7377bf;
       outline-style: none; }
-  section.search i.fa-search {
+  div.search i.fa-search {
     position: absolute;
     right: 1.6em;
     font-size: 1.4em;
@@ -781,7 +781,7 @@ header {
   .left-side {
     margin-left: 0; }
 
-  section.display-sm-nav {
+  .display-sm-nav {
     display: none; } }
 /*********************************************
 ***** Desktop
