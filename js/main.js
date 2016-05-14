@@ -84,6 +84,7 @@ window.onload = function(){
   var lineTrafficChart = document.getElementById("trafficChart").getContext("2d");
   var barDailyTraffic = document.getElementById("dailyTraffic").getContext("2d");
   var mobileUsers = document.getElementById("mobileUsers").getContext("2d");
+  
   var lineChartOptions = {
     // Points style
      pointDotRadius: 5,
