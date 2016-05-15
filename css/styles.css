@@ -92,8 +92,11 @@ body {
 ***********************************************************/
 .mobile-users {
   display: block;
-  padding: 2em 0 3em 1em;
+  padding: 2em 0 6em 1em;
   position: relative; }
+  @media screen and (min-width: 500px) {
+    .mobile-users {
+      padding: 2em 0 3em 1em; } }
   .mobile-users .block-heading {
     margin-bottom: 2em;
     text-align: center; }
@@ -104,8 +107,11 @@ body {
     list-style: none;
     display: inline-block;
     position: absolute;
-    top: 30%;
+    top: 22%;
     right: 1em; }
+    @media screen and (min-width: 500px) {
+      .mobile-users ul.sample {
+        top: 30%; } }
     .mobile-users ul.sample li {
       position: relative;
       margin-bottom: 2em;
