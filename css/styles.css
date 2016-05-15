@@ -323,7 +323,6 @@ section.alert {
   background-color: #7377bf;
   color: #fff;
   margin-top: 2em;
-  display: none;
   position: relative;
   text-align: center;
   z-index: 1000; }
