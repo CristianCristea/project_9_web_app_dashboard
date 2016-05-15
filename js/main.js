@@ -2,11 +2,11 @@
 var randomScalingFactor = function() { return Math.round(Math.random() * 2500);};
 var randomScalingFactor250 = function() { return Math.round(Math.random() * 250);};
 
-var lineChartData = {
+var lineMonthlyChartData = {
   labels : ["January", "February", "March", "April", "May", "June", "July"],
   datasets : [
     {
-      label: "Traffic chart",
+      label: "Monthly traffic chart",
       fillColor : "rgba(226, 227, 246, .6)",
       strokeColor : "#7377bf",
       pointColor : "#fff",
@@ -67,50 +67,92 @@ var doughnutChartData = [
     }
 ];
 
+Chart.defaults.global.responsive = true;
+Chart.defaults.global.scaleOverride= true;
+Chart.defaults.global.scaleSteps= 5;
+// Chart.defaults.global.scaleStepWidth= 500;
+Chart.defaults.global.scaleStartValue= 0;
+
+// Tooltip style
+Chart.defaults.global.tooltipFillColor= "#7377bf";
+Chart.defaults.global.tooltipFontFamily= "Lato, sans-serif";
+Chart.defaults.global.tooltipFontSize= 14;
+Chart.defaults.global.tooltipFontStyle= "normal";
+Chart.defaults.global.tooltipFontColor= "#fff";
+
+var lineTrafficChart = document.getElementById("trafficChart").getContext("2d");
+var barDailyTraffic = document.getElementById("dailyTraffic").getContext("2d");
+var mobileUsers = document.getElementById("mobileUsers").getContext("2d");
+var lineChartOptions = {
+  // Points style
+   pointDotRadius: 5,
+   pointDotStrokeWidth: 2,
+   bezierCurve: false,
+  // scale steps
+  scaleStepWidth: 500
+};
+
+var barChartOptions = {
+  scaleBeginAtZero : true,
+  scaleStepWidth: 50,
+  barDatasetSpacing : 1,
+  barValueSpacing : 3,
+  barShowStroke : false
+};
+
+var doughnutChartOptions = {
+  animateScale : false
+};
+
 window.onload = function(){
-  Chart.defaults.global.responsive = true;
-  Chart.defaults.global.scaleOverride= true;
-  Chart.defaults.global.scaleSteps= 5;
-  // Chart.defaults.global.scaleStepWidth= 500;
-  Chart.defaults.global.scaleStartValue= 0;
-
-  // Tooltip style
-  Chart.defaults.global.tooltipFillColor= "#7377bf";
-  Chart.defaults.global.tooltipFontFamily= "Lato, sans-serif";
-  Chart.defaults.global.tooltipFontSize= 14;
-  Chart.defaults.global.tooltipFontStyle= "normal";
-  Chart.defaults.global.tooltipFontColor= "#fff";
-
-  var lineTrafficChart = document.getElementById("trafficChart").getContext("2d");
-  var barDailyTraffic = document.getElementById("dailyTraffic").getContext("2d");
-  var mobileUsers = document.getElementById("mobileUsers").getContext("2d");
-  var lineChartOptions = {
-    // Points style
-     pointDotRadius: 5,
-     pointDotStrokeWidth: 2,
-     bezierCurve: false,
-    // scale steps
-    scaleStepWidth: 500
-  };
-
-  var barChartOptions = {
-    scaleBeginAtZero : true,
-    scaleStepWidth: 50,
-    barDatasetSpacing : 1,
-    barValueSpacing : 3,
-    barShowStroke : false
-  };
-
-  var doughnutChartOptions = {
-    animateScale : false
-  };
-
-  window.lineTrafficChart = new Chart(lineTrafficChart).Line(lineChartData, lineChartOptions);
+  window.lineTrafficChart = new Chart(lineTrafficChart).Line(lineMonthlyChartData, lineChartOptions);
   window.barDailyTraffic = new Chart(barDailyTraffic).Bar(barChartData, barChartOptions);
   window.mobileUsers = new Chart(mobileUsers).Doughnut(doughnutChartData, doughnutChartOptions);
+
+  // generate traffic chart random point values
+  var generateTrafficChartValues = function(pointsArray) {
+    for (var i = pointsArray.length - 1; i >= 0; i--) {
+      pointsArray[i].value = randomScalingFactor();
+    }
+    lineTrafficChart.update();
+  };
+
+  // change values on click event
+  $('#hourly').click(function(e) {
+    e.preventDefault();
+    generateTrafficChartValues(lineTrafficChart.datasets[0].points);
+  });
+
+  $('#daily').click(function(e) {
+    e.preventDefault();
+    generateTrafficChartValues(lineTrafficChart.datasets[0].points);
+  });
+
+  $('#weekly').click(function(e) {
+    e.preventDefault();
+    generateTrafficChartValues(lineTrafficChart.datasets[0].points);
+  });
+
+  $('#monthly').click(function(e) {
+    e.preventDefault();
+    generateTrafficChartValues(lineTrafficChart.datasets[0].points);
+  });
+
 };
 
 $(document).ready(function() {
+  // traffic chart menu active link
+  // args - parent ul id, link class
+  function toggleActiveMenuLink(idUlString, classLinkString) {
+    var $linksSelector = $('#' + idUlString).find('.' + classLinkString); 
+    $linksSelector.click(function(e) {
+      e.preventDefault();
+      $linksSelector.removeClass('active');
+      $(this).addClass('active');
+    });
+  }
+
+  toggleActiveMenuLink('traffic-menu', 'traffic-menu-link');
 
   // toggle main nav on small screens
   $('#menu').click(function() {
@@ -130,6 +172,7 @@ $(document).ready(function() {
     $('#alert-msg-one').fadeToggle('slow', 'linear');
     $('.traffic-chart .block-heading').toggleClass('p-t-1');
   });
+  
   // display alert two
   $('#alert-menu').find('#alert-two').click(function(e){
     e.preventDefault();
