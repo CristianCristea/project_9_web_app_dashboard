@@ -171,8 +171,12 @@
   }
 
   .join-date {
-    float: right;
-    margin-top: -0.625em;
+    display: block;
+    margin: .2em 0 0 3.8em;
+
+    @media screen and (min-width: 500px) {
+      float: right;
+    }
   }
 
   .member-name {

@@ -198,8 +198,12 @@ body {
       color: #4d4c72; }
   .block-new-member .join-date,
   .block-member-recent-activity .join-date {
-    float: right;
-    margin-top: -0.625em; }
+    display: block;
+    margin: .2em 0 0 3.8em; }
+    @media screen and (min-width: 500px) {
+      .block-new-member .join-date,
+      .block-member-recent-activity .join-date {
+        float: right; } }
   .block-new-member .member-name,
   .block-member-recent-activity .member-name {
     padding-left: 0.625em; }
