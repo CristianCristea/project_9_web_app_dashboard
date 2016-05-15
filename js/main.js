@@ -1,9 +1,9 @@
 // generating random scaling
-var randomScalingFactor = function(){ return Math.round(Math.random()*2500)};
-var randomScalingFactor250 = function(){ return Math.round(Math.random()*250)};
+var randomScalingFactor = function() { return Math.round(Math.random() * 2500);};
+var randomScalingFactor250 = function() { return Math.round(Math.random() * 250);};
 
 var lineChartData = {
-  labels : ["January","February","March","April","May","June","July"],
+  labels : ["January", "February", "March", "April", "May", "June", "July"],
   datasets : [
     {
       label: "Traffic chart",
@@ -13,28 +13,28 @@ var lineChartData = {
       pointStrokeColor : "#4d4c72",
       pointHighlightFill : "#4d4c72",
       pointHighlightStroke : "#fff",
-      data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+      data : [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
      }
   ]
 
 };
 
 var barChartData = {
-  labels : ["M","T","W","T","F","S","S"],
+  labels : ["S", "M", "T", "W", "T", "F", "S"],
   datasets : [
     {
       label: "Daily traffic chart mobile",
       fillColor : "#7377bf",
       strokeColor : "#7377bf",
       highlightFill: "#FFC870",
-      data : [randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250()]
+      data : [randomScalingFactor250(), randomScalingFactor250(), randomScalingFactor250(), randomScalingFactor250(), randomScalingFactor250(), randomScalingFactor250(), randomScalingFactor250()]
      },
     {
       label: "Daily traffic chart desktop",
       fillColor : "#81c98f",
       strokeColor : "#81c98f",
       highlightFill: "#FFC870",
-      data : [randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250(),randomScalingFactor250()]
+      data : [randomScalingFactor250(), randomScalingFactor250(), randomScalingFactor250(), randomScalingFactor250(), randomScalingFactor250(), randomScalingFactor250(), randomScalingFactor250()]
     }
   ]
 
@@ -94,10 +94,11 @@ window.onload = function(){
   };
 
   var barChartOptions = {
+    scaleBeginAtZero : true,
     scaleStepWidth: 50,
-    barDatasetSpacing : 80,
-    barValueSpacing : 30,
-    barShowStroke : false,
+    barDatasetSpacing : 1,
+    barValueSpacing : 3,
+    barShowStroke : false
   };
 
   var doughnutChartOptions = {
