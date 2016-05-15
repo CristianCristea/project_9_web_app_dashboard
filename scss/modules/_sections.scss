@@ -48,7 +48,7 @@ div.search {
     width: 74%;  
   }
 
-  @media screen and (min-width: #{$tablet-large}) {
+  @media screen and (min-width: #{$screen-small}) {
     float: right;
     margin-bottom: 1em;
   }
@@ -67,7 +67,6 @@ div.search {
     width: 80%;
     color: $primary-color;
     float: right;
-
 
     &:focus {
       border-color: $primary-color;

@@ -284,7 +284,7 @@ div.search {
     div.search {
       display: inline-block;
       width: 74%; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     div.search {
       float: right;
       margin-bottom: 1em; } }
@@ -538,8 +538,10 @@ input.cmn-toggle-round-flat:checked + label:after {
   font-size: 1.2em;
   font-weight: 400; }
 .form-settings .switch {
-  display: inline-block;
-  margin-left: 6.250em; }
+  display: inline-block; }
+  @media screen and (min-width: 500px) {
+    .form-settings .switch {
+      margin-left: 6.250em; } }
   .form-settings .switch #cmn-toggle-1 + label,
   .form-settings .switch #cmn-toggle-2 + label {
     margin-bottom: -0.625em; }
@@ -711,9 +713,10 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 10000;
   height: 4.875em;
-  background-color: #7377bf; }
+  background-color: #7377bf;
+  border-bottom: 1px solid #81c98f; }
   header .container {
     position: relative; }
   header .logo {

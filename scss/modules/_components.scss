@@ -150,8 +150,10 @@ input.cmn-toggle-round-flat:checked + label:after {
 
   .switch {
     display: inline-block;
-    margin-left: 6.250em;
 
+  @media screen and (min-width: 500px) {
+    margin-left: 6.250em;
+  }
     #cmn-toggle-1 + label,
     #cmn-toggle-2 + label{
       margin-bottom: -0.625em;
