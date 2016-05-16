@@ -643,7 +643,7 @@ option {
   /* Hides the modal window by default */
   z-index: 9999;
   width: 500px;
-  background: #FF5722;
+  background: #7377bf;
   -webkit-box-shadow: 0 8px 6px -6px black;
   -moz-box-shadow: 0 8px 6px -6px black;
   box-shadow: 0 8px 6px -6px black;
@@ -651,10 +651,11 @@ option {
   -moz-box-shadow: 0 8px 6px -6px black;
   box-shadow: 0 8px 6px -6px black; }
   .modalwindow h2 {
-    background-color: #E64A19;
+    background-color: #4d4c72;
+    border-bottom: 1px solid #81c98f;
     padding: 15px;
     font-size: 25px;
-    color: #000;
+    color: #fff;
     margin: 0;
     text-align: center; }
   .modalwindow .content {

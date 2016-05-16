@@ -280,7 +280,7 @@ option {
     display:none; /* Hides the modal window by default */
     z-index:9999;
     width:500px;
-    background: #FF5722;
+    background: $primary-color;
     -webkit-box-shadow: 0 8px 6px -6px black;
     -moz-box-shadow: 0 8px 6px -6px black;
     box-shadow: 0 8px 6px -6px black;
@@ -289,17 +289,18 @@ option {
     box-shadow: 0 8px 6px -6px black;
 
     h2 {
-      background-color: #E64A19;
+      background-color: $secondary-color;
+      border-bottom: 1px solid $de_york;
       padding: 15px;
       font-size: 25px;
-      color: #000;
+      color: $white_color;
       margin: 0;
       text-align: center;
   }
 
   .content {
     padding: 20px;
-    color: #fff;
+    color: $white_color;
     font-size: 22px;
     line-height: 30px;
   }

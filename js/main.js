@@ -226,16 +226,28 @@ $(document).ready(function() {
   // modal box
   $('input[type="submit"]').click(function(e) {
 
-    //Cancel the link behavior
+
+    // check user input
+    var $modalContent = $('#modal .content');
+    var $formUsernameValue = $('#username').val();
+    var $formMessageValue  = $('#message').val();
+
+    if (!$formUsernameValue && !$formMessageValue) {
+      $modalContent.text('Please enter a username and a message!');
+    } else {
+      $modalContent.text('Your message was sent.');   
+    }
+
+    // Cancel the link behavior
     e.preventDefault();
-    //Get the A tag
+    // Get the input tag
     var id = $(this).attr('name');
 
-    //Get the window height and width
+    // Get the window height and width
     var winH = $(window).height();
     var winW = $(window).width();
 
-    //Set the popup window to center
+    // Set the popup window to center
     $(id).css('top', winH/2-$(id).height()/2);
     $(id).css('left', winW/2-$(id).width()/2);
 
@@ -243,11 +255,12 @@ $(document).ready(function() {
     $(id).fadeIn(400);
   });
 
-  //if close button is clicked - modal
+  // close button modal
   $('.modalwindow .close').click(function (e) {
       //Cancel the link behavior
       e.preventDefault();
       $('.modalwindow').fadeOut(400);
   });
+
 
 });
