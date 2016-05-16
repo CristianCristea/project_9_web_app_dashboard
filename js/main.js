@@ -108,6 +108,11 @@ window.onload = function(){
   window.lineTrafficChart = new Chart(lineTrafficChart).Line(lineMonthlyChartData, lineChartOptions);
   window.barDailyTraffic = new Chart(barDailyTraffic).Bar(barChartData, barChartOptions);
   window.mobileUsers = new Chart(mobileUsers).Doughnut(doughnutChartData, doughnutChartOptions);
+  var chartHourlyLabels = ["00:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00"];
+  var chartDailyLabels = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ]
+  var chartWeeklyLabels = ["01 - 04", "05 - 09", "10 - 14", "15 - 19", "20 - 24", "25 - 29", "30 - 34"];
+  var chartMonthlyLabels = ["January", "February", "March", "April", "May", "June", "July"];
+
 
   // generate traffic chart random point values
   var generateTrafficChartValues = function(pointsArray) {
@@ -117,25 +122,43 @@ window.onload = function(){
     lineTrafficChart.update();
   };
 
+  var generateLabels = function(oldLabels, newLabels) {
+    for (var i = 0; i < oldLabels.length; i++) {
+      for (var j = 0; j < newLabels.length; j++) {
+        if (i === j) {
+         oldLabels[i] = newLabels[j];  
+        }
+       }
+    }
+    lineTrafficChart.update();
+  };
+
   // change values on click event
+  var chartPointsArray = lineTrafficChart.datasets[0].points;
+  var chartLabels = lineMonthlyChartData.labels;
+
   $('#hourly').click(function(e) {
     e.preventDefault();
-    generateTrafficChartValues(lineTrafficChart.datasets[0].points);
+    generateTrafficChartValues(chartPointsArray);
+    generateLabels(chartLabels, chartHourlyLabels);
   });
 
   $('#daily').click(function(e) {
     e.preventDefault();
-    generateTrafficChartValues(lineTrafficChart.datasets[0].points);
+    generateTrafficChartValues(chartPointsArray);
+    generateLabels(chartLabels, chartDailyLabels);
   });
 
   $('#weekly').click(function(e) {
     e.preventDefault();
-    generateTrafficChartValues(lineTrafficChart.datasets[0].points);
+    generateTrafficChartValues(chartPointsArray);
+    generateLabels(chartLabels, chartWeeklyLabels);
   });
 
   $('#monthly').click(function(e) {
     e.preventDefault();
-    generateTrafficChartValues(lineTrafficChart.datasets[0].points);
+    generateTrafficChartValues(chartPointsArray);
+    generateLabels(chartLabels, chartMonthlyLabels);
   });
 
 };
