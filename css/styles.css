@@ -759,12 +759,12 @@ input.form-primary-button {
 .display-sm-nav {
   background-color: #4d4c72;
   margin-top: 4.8em;
-  padding: 3em;
+  padding: 1em;
   text-align: center; }
   .display-sm-nav .menu-btn {
     background: none;
     color: #fff;
-    font-size: 2em;
+    font-size: 1.2em;
     border: 0;
     cursor: pointer;
     outline-color: #81c98f; }
