@@ -189,20 +189,6 @@ $(document).ready(function() {
     $('#alert-menu, #msg-number').fadeToggle('slow', 'linear');
   });
 
-  // display alert one
-  $('#alert-menu').find('#alert-one').click(function(e){
-    e.preventDefault();
-    $('#alert-msg-one').fadeToggle('slow', 'linear');
-    $('.traffic-chart .block-heading').toggleClass('p-t-1');
-  });
-
-  // display alert two
-  $('#alert-menu').find('#alert-two').click(function(e){
-    e.preventDefault();
-    $('#alert-msg-two').fadeToggle('slow', 'linear');
-    $('.traffic-chart .block-heading').toggleClass('p-t-1');
-  });
-
   // close alert box
   $('.close').click(function(e) {
     e.preventDefault();
