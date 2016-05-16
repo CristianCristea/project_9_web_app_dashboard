@@ -2,7 +2,7 @@
 var randomScalingFactor = function() { return Math.round(Math.random() * 2500);};
 var randomScalingFactor250 = function() { return Math.round(Math.random() * 250);};
 
-var lineMonthlyChartData = {
+var lineChartData = {
   labels : ["January", "February", "March", "April", "May", "June", "July"],
   datasets : [
     {
@@ -105,7 +105,7 @@ var doughnutChartOptions = {
 };
 
 window.onload = function(){
-  window.lineTrafficChart = new Chart(lineTrafficChart).Line(lineMonthlyChartData, lineChartOptions);
+  window.lineTrafficChart = new Chart(lineTrafficChart).Line(lineChartData, lineChartOptions);
   window.barDailyTraffic = new Chart(barDailyTraffic).Bar(barChartData, barChartOptions);
   window.mobileUsers = new Chart(mobileUsers).Doughnut(doughnutChartData, doughnutChartOptions);
   var chartHourlyLabels = ["00:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00"];
@@ -135,7 +135,7 @@ window.onload = function(){
 
   // change values on click event
   var chartPointsArray = lineTrafficChart.datasets[0].points;
-  var chartLabels = lineMonthlyChartData.labels;
+  var chartLabels = lineChartData.labels;
 
   $('#hourly').click(function(e) {
     e.preventDefault();
