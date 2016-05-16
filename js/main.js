@@ -186,4 +186,68 @@ $(document).ready(function() {
     $(this).parent().fadeOut('slow', 'linear');
   });
 
+  // message user widget
+
+  // typehead.js
+  var substringMatcher = function(strs) {
+    return function findMatches(q, cb) {
+      var matches, substringRegex;
+
+      // an array that will be populated with substring matches
+      matches = [];
+
+      // regex used to determine if a string contains the substring `q`
+      substrRegex = new RegExp(q, 'i');
+
+      // iterate through the pool of strings and for any string that
+      // contains the substring `q`, add it to the `matches` array
+      $.each(strs, function(i, str) {
+        if (substrRegex.test(str)) {
+          matches.push(str);
+        }
+      });
+
+      cb(matches);
+    };
+  };
+
+  var users = ['Sauro Sauro', 'Rem Rem', 'Rva Giselle', 'Allison Grace'];
+
+  $('#autocomplete .typeahead').typeahead({
+    hint: true,
+    highlight: true,
+    minLength: 1
+  },
+  {
+    name: 'users',
+    source: substringMatcher(users)
+  });
+
+  // modal box
+  $('input[type="submit"]').click(function(e) {
+
+    //Cancel the link behavior
+    e.preventDefault();
+    //Get the A tag
+    var id = $(this).attr('name');
+
+    //Get the window height and width
+    var winH = $(window).height();
+    var winW = $(window).width();
+
+    //Set the popup window to center
+    $(id).css('top', winH/2-$(id).height()/2);
+    $(id).css('left', winW/2-$(id).width()/2);
+
+    //transition effect
+    $(id).fadeIn(400);
+  });
+
+  //if close button is clicked - modal
+  $('.modalwindow .close').click(function (e) {
+      //Cancel the link behavior
+      e.preventDefault();
+      $('.modalwindow').fadeOut(400);
+  });
+
 });

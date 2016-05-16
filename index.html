@@ -225,14 +225,36 @@
         <div class="container">
           <div class="block-message-user">
             <h3 class="block-heading">Message user</h3>
-            <form action="#" class="form-message">
+            <form action="#" class="form-message" id="form-user-message">
 
-              <input type="search" placeholder="Search for user">
+              <div id="autocomplete" class="search-user">
+                <input type="text" placeholder="Search for user" id="user-name" class="typeahead">
+              </div>
               <textarea name="message-body" id="message" cols="30" rows="10" placeholder="Message for user"></textarea>
 
-              <input class="form-primary-button" type="submit" value="Send">
+              <input class="form-primary-button" name="#modal" type="submit" value="Send">
             </form>
           </div> <!-- ./block-message-user -->
+
+          <!-- modal -->
+          <!-- #modal is the id of a DIV defined in the code below -->
+
+          <!-- <a href="#modal" name="modal">Modal Window</a> -->
+
+          <!-- #customize your modal window here -->
+          <div id="modal" class="modalwindow">
+
+              <!-- Modal window Title -->
+              <h2>Simple jQuery Modal Window</h2>
+
+              <!-- close button is defined as close class -->
+              <a href="#" class="close">X</a>
+
+              <div class="content">
+                  Modal Window Content
+              </div>
+
+          </div> <!-- /. end modal -->
 
           <div class="block-settings">
             <h3 class="block-heading">Settings</h3>
@@ -273,6 +295,7 @@
     <script src="js/jquery-1.12.3.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script> -->
     <script src="js/Chart.js"></script>
+    <script src="js/typeahead.jquery.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

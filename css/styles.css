@@ -36,6 +36,11 @@
 .p-t-1 {
   padding-top: 1em !important; }
 
+.active {
+  background-color: #81c98f;
+  color: #fff;
+  border-radius: 10px; }
+
 /***********************************************************
 *** General
 ***********************************************************/
@@ -499,6 +504,7 @@ input.cmn-toggle-round-flat:checked + label:after {
 /***********************************************************
 *** Form message
 ***********************************************************/
+.form-message .search-user input,
 .form-message input,
 .form-message textarea {
   box-sizing: border-box;
@@ -507,12 +513,12 @@ input.cmn-toggle-round-flat:checked + label:after {
   margin-bottom: 1.250em;
   border: 2px solid #b2b2b2;
   border-radius: 5px; }
-.form-message input[type="search"] {
+.form-message .search-user input[type="text"] {
   font-size: 1em;
   padding: 0.625em;
   font-weight: 300;
   color: #7377bf; }
-  .form-message input[type="search"]:focus {
+  .form-message .search-user input[type="text"]:focus {
     outline-color: #7377bf;
     border-style: solid;
     border-color: #7377bf;
@@ -629,6 +635,107 @@ option {
       right: 9em; } }
 
 /***********************************************************
+*** Modal
+***********************************************************/
+.modalwindow {
+  position: fixed;
+  display: none;
+  /* Hides the modal window by default */
+  z-index: 9999;
+  width: 500px;
+  background: #FF5722;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black; }
+  .modalwindow h2 {
+    background-color: #E64A19;
+    padding: 15px;
+    font-size: 25px;
+    color: #000;
+    margin: 0;
+    text-align: center; }
+  .modalwindow .content {
+    padding: 20px;
+    color: #fff;
+    font-size: 22px;
+    line-height: 30px; }
+  .modalwindow .close {
+    float: right;
+    margin-top: -47px;
+    margin-right: 15px;
+    width: 17px;
+    height: 17px;
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: arial; }
+
+/***********************************************************
+*** Search bar typeahead plugin
+***********************************************************/
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 94%;
+  padding: 8px 12px;
+  font-size: 24px;
+  line-height: 30px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  outline: none; }
+
+.typeahead {
+  background-color: #fff; }
+  .typeahead:focus {
+    border: 2px solid #7377bf; }
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+
+.tt-hint {
+  color: #999; }
+
+.tt-menu {
+  width: 94%;
+  margin: 12px 0;
+  padding: 8px 0;
+  background-color: #fff;
+  color: #ccc;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 18px;
+  line-height: 24px; }
+  .tt-suggestion .tt-cursor {
+    color: #fff;
+    background-color: #7377bf; }
+  .tt-suggestion p {
+    margin: 0; }
+  .tt-suggestion:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #7377bf; }
+
+span.twitter-typeahead {
+  width: 100%; }
+
+/***********************************************************
 *** Buttons
 ***********************************************************/
 input.form-primary-button {
@@ -686,10 +793,6 @@ nav.main-nav {
 /***********************************************************
 *** Traffic nav
 ***********************************************************/
-nav.traffic-nav .active {
-  background-color: #81c98f;
-  color: #fff;
-  border-radius: 10px; }
 nav.traffic-nav ul {
   list-style: none; }
   nav.traffic-nav ul li {
@@ -890,5 +993,10 @@ header {
 
 .p-t-1 {
   padding-top: 1em !important; }
+
+.active {
+  background-color: #81c98f;
+  color: #fff;
+  border-radius: 10px; }
 
 /*# sourceMappingURL=styles.css.map */
