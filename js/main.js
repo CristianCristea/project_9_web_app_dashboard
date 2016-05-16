@@ -144,7 +144,7 @@ $(document).ready(function() {
   // traffic chart menu active link
   // args - parent ul id, link class
   function toggleActiveMenuLink(idUlString, classLinkString) {
-    var $linksSelector = $('#' + idUlString).find('.' + classLinkString); 
+    var $linksSelector = $('#' + idUlString).find('.' + classLinkString);
     $linksSelector.click(function(e) {
       e.preventDefault();
       $linksSelector.removeClass('active');
@@ -172,7 +172,7 @@ $(document).ready(function() {
     $('#alert-msg-one').fadeToggle('slow', 'linear');
     $('.traffic-chart .block-heading').toggleClass('p-t-1');
   });
-  
+
   // display alert two
   $('#alert-menu').find('#alert-two').click(function(e){
     e.preventDefault();
@@ -235,7 +235,7 @@ $(document).ready(function() {
     if (!$formUsernameValue && !$formMessageValue) {
       $modalContent.text('Please enter a username and a message!');
     } else {
-      $modalContent.text('Your message was sent.');   
+      $modalContent.text('Your message was sent.');
     }
 
     // Cancel the link behavior
