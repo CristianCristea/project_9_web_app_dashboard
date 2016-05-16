@@ -234,6 +234,10 @@ $(document).ready(function() {
 
     if (!$formUsernameValue && !$formMessageValue) {
       $modalContent.text('Please enter a username and a message!');
+    } else if (!$formUsernameValue) {
+      $modalContent.text('Please enter a username!');
+    } else if (!$formMessageValue) {
+      $modalContent.text('Please enter a message!');
     } else {
       $modalContent.text('Your message was sent.');
     }
