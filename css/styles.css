@@ -459,8 +459,7 @@ section.message-settings {
   display: block;
   position: relative;
   cursor: pointer;
-  outline: none;
-  user-select: none; }
+  outline: none; }
 
 input.cmn-toggle-round-flat + label {
   padding: 2px;
